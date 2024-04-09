@@ -1,0 +1,147 @@
+﻿@model IEnumerable<ClothingStore.Models.Entity.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+
+    .toolbar-product {
+        font-style: normal;
+        color: #000;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+
+    .product {
+        font-size: 14px;
+        line-height: 20px;
+        text-align: left;
+        padding: 15px;
+        height: 560px;
+        width: 315px;
+        margin: auto;
+        margin-top: 20px;
+        flex: 0 0 24%;
+        box-sizing: border-box;
+        border-radius: 15px;
+        border: 0.5px solid #D9D3CC;
+        ;
+    }
+
+    .name-product {
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: bold;
+    }
+
+    .list-product {
+        color: #212529;
+        font-family: "Roboto Condensed", sans-serif;
+        grid-area: auto;
+        line-height: 24px;
+        margin-top: 20px;
+        padding: 0px;
+        display: flex; /* Sử dụng flexbox */
+        flex-wrap: wrap; /* Cho phép các phần tử chuyển hàng khi không đủ chỗ */
+    }
+
+
+    .product img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+
+    .details-product {
+        margin-top: 25px;
+        margin-righ: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .price-product {
+        margin-top: 10px;
+        margin-right: 0px;
+    }
+
+    .btn-details {
+        margin-top: 10px;
+        display: flex;
+    }
+
+        .btn-details .nav-link {
+            margin-right: 10px;
+            justify-content: space-between;
+        }
+
+    .formSelect-right {
+        margin-right: 0px;
+    }
+
+    .formSelect-left {
+        nav-left: auto;
+    }
+
+</style>
+
+<main class="container">
+    <div class="toolbar-product my-5">
+
+
+        <select>
+            <option value="1">Lựa chọn 1</option>
+            <option value="2">Lựa chọn 2</option>
+            <option value="3">Lựa chọn 3</option>
+        </select>
+
+        <div style="flex-grow: 1;"> </div>
+
+        <form asp-controller="Product" asp-action="SortBy"  method="post">
+            <select id="sortBy" name="sortBy" onchange="this.form.submit()">
+                <option>Sắp xếp</option>
+                <option value="PriceDesc">Giá giảm dần</option>
+                <option value="PriceAsc">Giá tăng dần</option>
+                <option value="NameAsc">Tên (A-Z)</option>
+                <option value="NameDesc">Tên (Z-A)</option>
+            </select>
+        </form>
+    </div>
+
+
+
+    <div class="p-4 mx-4">
+        <div class="row row-cols-4 gap-3 w-100 justify-content-start">
+            @foreach (var item in Model)
+            {
+                <div class="card p-0" style="width: 18rem;">
+                    @if (item.ProductImages?[0].ImageUrl != null)
+                    {
+                        <img src="@item.ProductImages[0].ImageUrl" class="card-img-top">
+                    }
+                    else
+                    {
+                        <p>image null</p>
+                    }
+                    
+                    
+                    <div class="card-body px-4">
+                        <h6 class="card-title">@item.Name</h6>
+                        <p class="card-text">@item.UnitPrice VNĐ</p>
+                        <div class="action d-flex justify-content-between">
+                            
+                            <a asp-controller="Wishlist" asp-action="AddToWishlist" asp-route-productId="@item.ProductId"><i class="bi bi-heart icon"></i></a>
+                            
+                            <a href="#" class=""><i class="bi bi-cart3 icon"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+</main>

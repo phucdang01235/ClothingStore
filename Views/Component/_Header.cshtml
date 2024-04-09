@@ -1,0 +1,419 @@
+﻿@using ClothingStore.Models
+@using ClothingStore.Models.Entity
+@using ClothingStore.Models.Helper;
+@using Microsoft.AspNetCore.Http;
+
+@{
+    IEnumerable<Wishlist> wishlists = Context.Session.GetObjectFromJson<IEnumerable<Wishlist>>("Wishlists");
+    ShoppingCart shoppingCart = Context.Session.GetObjectFromJson<ShoppingCart>("ShoppingCart") ?? new ShoppingCart();
+    bool shoppingCartExist = shoppingCart.Items.Count > 0;
+}
+<header class="position-sticky top-0" style="z-index: 999;">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
+        <div class="container-fluid justify-content-between">
+            <a class="navbar-brand ms-2 me-5" asp-area="" asp-controller="Home" asp-action="Index">
+                <img src="/images/logo.png" style="width: 118px; height: 55px; padding:5px; margin-right: 12px;" />
+            </a>
+
+            <div class="w-100">
+                <ul class="d-flex justify-content-end border-end">
+                    <li class="dropdown me-5">
+                        <a class="btn dropdown-toggle" asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nam" asp-route-category="Áo Len" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Nam
+                        </a>
+
+                        <div class="dropdown-menu dropdown-custom" style="padding: 24px 48px;">
+                            <div class="row row-cols-3 row-gap-5" style="width: max-content;">
+                                <div class="col dropdown-table">
+                                    <p class="dropdown-tittle">ÁO NAM</p>
+                                    <ul>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nam" asp-route-category="Áo Polo" class="dropdown-link">Áo Polo Nam</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nam" asp-route-category="Áo Thun" class="dropdown-link">Áo Thun Nam</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nam" asp-route-category="Áo Sơ Mi" class="dropdown-link">Áo Sơ Mi Nam</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nam" asp-route-category="Áo Khoác" class="dropdown-link">Áo Khoác Nam</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nam" asp-route-category="Áo Vest - Blazer" class="dropdown-link">Áo Vest - Blazer Nam</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nam" asp-route-category="Áo Tank Top" class="dropdown-link">Áo Tank Top Nam</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nam" asp-route-category="Áo Len" class="dropdown-link">Áo Len Nam</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nam" asp-route-category="Áo Hoodie - Sweater" class="dropdown-link">Áo Hoodie - Sweater Nam</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col dropdown-table">
+                                    <p class="dropdown-tittle">QUẦN NAM</p>
+                                    <ul>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nam" asp-route-category="Quần Jean" class="dropdown-link">Quần Jean Nam</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nam" asp-route-category="Quần Kaki" class="dropdown-link">Quần Kaki Nam</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nam" asp-route-category="Quần Vải" class="dropdown-link">Quần Vải Nam</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nam" asp-route-category="Quần Short" class="dropdown-link">Quần Short Nam</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nam" asp-route-category="Quần Jogger" class="dropdown-link">Quần Jogger Nam</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col dropdown-table">
+                                    <p class="dropdown-tittle">PHỤ KIỆN</p>
+                                    <ul>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-category="Nón" class="dropdown-link">Nón - Băng Đô</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-category="Túi" class="dropdown-link">Túi - Ví - Balo</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-category="Thắt Lưng" class="dropdown-link">Thắt Lưng</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-category="Vớ - Tất" class="dropdown-link">Vớ - Tất</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-category="Giày" class="dropdown-link">Giày - Dép</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col dropdown-table">
+                                    <p class="dropdown-tittle">KHÁC</p>
+                                    <ul>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nam" asp-route-category="Đồ Lót" class="dropdown-link">Đồ Lót Nam</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="dropdown me-5">
+                        <a class="btn dropdown-toggle" asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nam" asp-route-category="Áo Len" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Nữ
+                        </a>
+
+                        <div class="dropdown-menu dropdown-custom" style="padding: 24px 48px;">
+                            <div class="row row-cols-3 row-gap-5" style="width: max-content;">
+                                <div class="col dropdown-table">
+                                    <p class="dropdown-tittle">ÁO NỮ</p>
+                                    <ul>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nữ" asp-route-category="Áo Thun" class="dropdown-link">Áo Thun Nữ</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nữ" asp-route-category="Áo Sơ Mi" class="dropdown-link">Áo Sơ Mi Nữ</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nữ" asp-route-category="Áo Khoác" class="dropdown-link">Áo Khoác Nữ</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nữ" asp-route-category="Áo Vest - Blazer" class="dropdown-link">Áo Vest - Blazer Nữ</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nữ" asp-route-category="Áo Tank Top" class="dropdown-link">Áo Tank Top Nữ</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nữ" asp-route-category="Áo Len" class="dropdown-link">Áo Len Nữ</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nữ" asp-route-category="Áo Hoodie - Sweater" class="dropdown-link">Áo Hoodie - Sweater Nữ</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col dropdown-table">
+                                    <p class="dropdown-tittle">QUẦN NỮ</p>
+                                    <ul>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nữ" asp-route-category="Quần Jean" class="dropdown-link">Quần Jean Nữ</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nữ" asp-route-category="Quần Kaki" class="dropdown-link">Quần Kaki Nữ</</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nữ" asp-route-category="Quần Vải" class="dropdown-link">Quần Vải Nữ</</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nữ" asp-route-category="Quần Short" class="dropdown-link">Quần Short Nữ</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nữ" asp-route-category="Quần Jogger" class="dropdown-link">Quần Jogger Nữ</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col dropdown-table">
+                                    <p class="dropdown-tittle">PHỤ KIỆN</p>
+                                    <ul>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-category="Nón - Băng Đô" class="dropdown-link">Nón - Băng Đô</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-category="Túi - Ví - Balo" class="dropdown-link">Túi - Ví - Balo</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-category="Thắt Lưng" class="dropdown-link">Thắt Lưng</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-category="Vớ - Tất" class="dropdown-link">Vớ - Tất</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-category="Giày - Dép" class="dropdown-link">Giày - Dép</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col dropdown-table">
+                                    <p class="dropdown-tittle">KHÁC</p>
+                                    <ul>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nữ" asp-route-category="Đồ Lót" class="dropdown-link">Đồ Lót Nữ</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nữ" asp-route-category="Đầm Nữ" class="dropdown-link">Đầm Nữ</a></li>
+                                        <li><a asp-controller="Product" asp-action="RedirectToProductsView" asp-route-gender="Nữ" asp-route-category="Chân Váy" class="dropdown-link">Chân Váy</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+            <form asp-controller="Product" asp-action="Search" method="get">
+                <div class="row border-end" style="min-width: 350px;">
+                    <div class="col-8 d-flex" style="margin-left: 20px;">
+                        <input type="text" id="keyword" name="keyword" class="form-control w-100 rounded-pill mr-2">
+                    </div>
+                    <div class="col-3">
+                        <button type="submit" class="btn btn-primary mt-2 rounded-pill">Tìm kiếm</button>
+                    </div>
+                </div>
+            </form>
+
+
+            <div>
+                <ul class="navbar-nav">
+                    <li class="ms-3 dropdown">
+                        <a class="dropdown-toggle dropdown-toggle-account nav-link text-dark icon" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <partial name="../Shared/_LoginPartial" />
+                        </ul>
+                    </li>
+                    <li class="ms-3">
+                        <a class="nav-link text-dark icon" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasWishlist" data-bs-target="#offcanvasWishlist">
+                            <i class="bi bi-heart"></i>
+                        </a>
+                    </li>
+
+                    <li class="ms-3">
+                        <a class="nav-link text-dark icon" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasShoppingCart" data-bs-target="#offcanvasShoppingCart">
+                            <i class="bi bi-cart3"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+    <div class="offcanvas offcanvas-end" style="width: 40%;" tabindex="-1" id="offcanvasWishlist" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h1 class="offcanvas-title"><i class="bi bi-heart"></i> Sản phẩm yêu thích</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="row position-relative">
+                @if (wishlists != null)
+                {
+                    @foreach (var wishlist in wishlists)
+                    {
+                        <div class="col-4 my-4">
+                            <a asp-controller="Product" asp-action="Detail" asp-route-productId="@wishlist.ProductId">
+                                @if (wishlist.Product.ProductImages?[0].ImageUrl != null)
+                                {
+                                    @* <img src="@wishlist.ProductImages[0].ImageUrl" /> *@
+                                    <img src="/images/tst1.jpg" />
+                                }
+                                else
+                                {
+                                    <p>image null</p>
+                                }
+                            </a>
+
+                        </div>
+                        <div class="col-8 wishlist-body d-flex flex-column justify-content-between  my-4">
+                            <div class="wishlist-header">
+                                <a asp-controller="Product" asp-action="Detail" asp-route-productId="@wishlist.ProductId">
+                                    @wishlist.Product.Name
+                                </a>
+                                <a asp-controller="Wishlist" asp-action="RemoveFromWishlist" asp-route-productId="@wishlist.ProductId" class="a-remove-wishlist">
+                                    <i class="bi bi-x-lg"></i>
+                                </a>
+                            </div>
+                            <div class="wishlist-body ">
+                                <p class="wishlist-price">@wishlist.UnitPrice VNĐ</p>
+                                <form asp-controller="ShoppingCart" asp-action="AddToShoppingCart" method="post">
+                                    <input value="@wishlist.ProductId" name="productId" hidden>
+                                    <input class="myNumber" type="number" min="1" value="1" name="quantity" />
+                                    <button class="add-shopping-cart p-2 d-block text-center" type="submit">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </form>
+                            </div>
+
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end" style="width: 40%;" tabindex="-1" id="offcanvasShoppingCart" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h1 class="offcanvas-title"><i class="bi bi-cart3"></i> Giỏ hàng</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <p class="d-block" style="padding: 0 50px;">@shoppingCart.Items.Count Sản phẩm</p>
+        <form asp-controller="ShoppingCart" asp-action="CheckoutCompleting" method="post">
+            <div class="offcanvas-body" style="height: 66%; overflow-y: auto;">
+                <div class="row position-relative">
+                    @if (shoppingCart.Items.Count > 0)
+                    {
+                        @for (int i = 0; i < shoppingCart.Items.Count; i++)
+                        {
+                            <div class="col-4 my-4">
+                                <input value="@shoppingCart.Items[i].ProductId" name="orderDetailDTO[@i].ProductId" hidden />
+                                <a asp-controller="Product" asp-action="Detail" asp-route-productId="@shoppingCart.Items[i].ProductId">
+                                    @if (shoppingCart.Items[i].Product.ProductImages?[0].ImageUrl != null)
+                                    {
+                                        @* <img src="@wishlist.ProductImages[0].ImageUrl" /> *@
+                                        <img src="/images/tst1.jpg" />
+                                    }
+                                    else
+                                    {
+                                        <p>image null</p>
+                                    }
+                                </a>
+                            </div>
+                            <div class="col-8 wishlist-body d-flex flex-column justify-content-between my-4">
+                                <div class="wishlist-header">
+                                    <a asp-controller="Product" asp-action="Detail" asp-route-productId="@shoppingCart.Items[i].ProductId">
+                                        @shoppingCart.Items[i].Product.Name
+                                    </a>
+                                    <a asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCart" asp-route-productId="@shoppingCart.Items[i].ProductId" class="a-remove-wishlist">
+                                        <i class="bi bi-x-lg"></i>
+                                    </a>
+                                </div>
+                                <div class="wishlist-body ">
+                                    <input class="wishlist-price border-0 mb-4" value="@(shoppingCart.Items[i].UnitPrice).000" name="orderDetailDTO[@i].UnitPrice" readonly /> VNĐ
+                                    <input class="myNumber" type="number" name="orderDetailDTO[@i].NumberOfProduct" value="@shoppingCart.Items[i].Quantity" />
+                                </div>
+
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="offcanvas-bottom border border-top">
+                <div class="sub-total">
+                    <p>Tổng tiền: </p>
+                    <p>@(shoppingCart.TotalPrice).000 VNĐ</p>
+                </div>
+                <div class="sub-action">
+                    <button class="add-shopping-cart p-2 d-block text-center col-5">
+                        Thoát
+                    </button>
+
+                    <button class="add-shopping-cart p-2 d-block text-center col-5" type="submit" @(shoppingCartExist ? "" : "disabled")>
+                        Thanh toán
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</header>
+
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+        padding: 0 !important;
+    }
+
+    .navbar {
+        padding: 10px 50px;
+    }
+
+    .nav-link {
+        font-size: 18px;
+    }
+
+    .navbar-nav .nav-item .nav-link:hover {
+        text-decoration: underline; /* Thêm text-decoration khi hover */
+    }
+
+    .icon {
+        font-size: 22px;
+        margin-left: 14px;
+    }
+
+    .dropdown-custom {
+        left: unset !important;
+        top: 190% !important;
+        right: 0;
+    }
+
+    .dropdown-tittle {
+        font-weight: 600;
+        border-bottom: 1px solid black;
+    }
+
+    .dropdown-link {
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+
+        .dropdown-link:hover {
+            text-decoration: underline 2px;
+        }
+
+    .dropdown-table {
+        padding: 0px 12px 0px 12px;
+    }
+
+        .dropdown-table li {
+            margin-bottom: 6px;
+        }
+
+    .dropdown-toggle-account::after {
+        display: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .offcanvas-header {
+        padding: 42px 50px 37px;
+    }
+
+    .offcanvas-title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        color: black;
+        border: none;
+        position: relative;
+        margin: 0;
+    }
+
+    .offcanvas-body {
+        padding: 0 50px;
+    }
+
+    .wishlist-header {
+        font-size: 17px;
+        text-transform: capitalize;
+        line-height: 30px;
+        margin-bottom: 16px;
+    }
+
+        .wishlist-header a:hover {
+            text-decoration: underline;
+        }
+
+    .offcanvas-body a img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .wishlist-price {
+        font-weight: 700;
+        line-height: 20px;
+    }
+
+    .add-shopping-cart {
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 25px;
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+    }
+
+        .add-shopping-cart:hover {
+            color: white;
+            background-color: black;
+        }
+
+    .offcanvas-header > h1 > i {
+        margin-right: 16px;
+    }
+
+    .offcanvas-bottom {
+        padding: 20px 50px 30px;
+    }
+
+    .sub-total,
+    .sub-action {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .a-remove-wishlist {
+        position: absolute;
+        right: -16px;
+        background-color: black;
+        color: white;
+        width: 30px;
+        text-align: center;
+        border-radius: 18px;
+    }
+</style>

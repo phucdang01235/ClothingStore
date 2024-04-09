@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ClothingStore</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ClothingStore.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	@if (Context.User.Identity.IsAuthenticated)
+	{
+		<partial name="../Component/_Header" />
+	}
+	
+
+    <div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+	<footer class="page-footer">
+
+		<div class="list-footer-information">
+			<div class="footer-information">
+				<div class="footer-information-logo " style="margin-bottom:10px">
+					<img src="~/images/logo.png" alt="Túi - Ví - Balo" width="150" height="70">
+				</div>
+				<h5 style="margin-bottom:10px">CÔNG TY TNHH DREAM KNIGHT</h5>
+				<p style="margin-bottom:10px">Mã Số Thuế: 0106486365</p>
+				<p style="margin-bottom:10px">Văn phòng: tầng 5 Tòa nhà IMC, Phường Tân Định, Quận 1, TP.HCM</p>
+
+				<h7 style="margin-bottom:10px">THAM GIA BẢNG TIN CỦA CHÚNG TÔI</h7>
+
+				<form class="form subscribe" action="https://routine.vn/newsletter/subscriber/new/" style="margin-bottom: 10px">
+					<strong>Bản tin</strong>
+					<input name="email" type="email" id="newsletter" placeholder="Nhập email của bạn">
+
+					<button class="action subscribe primary" type="submit">
+						<span>Đăng ký</span>
+					</button>
+
+				</form>
+
+				<p>
+					<img src="/images/BoCongThuong.jpg" alt="Túi - Ví - Balo" width="150" height="60" style="margin-left:0px">
+				</p>
+
+			</div>
+
+			<div class="footer-information">
+
+				<div class="footer-company">
+					<h5>CÔNG TY</h5>
+
+					<li class="bullet-music"><a><i class="bi bi-play-fill "></i>Giới thiệu về ROUTINE</a></li>
+					<li class="bullet-music"><a><i class="bi bi-play-fill"></i>THE 31</a></li>
+					<li class="bullet-music"><a><i class="bi bi-play-fill"></i>Tuyển dụng</a></li>
+					<li class="bullet-music"><a><i class="bi bi-play-fill"></i>Tin Thời Trang</a></li>
+					<li class="bullet-music"><a><i class="bi bi-play-fill"></i>Hợp tác nhượng quyền</a></li>
+					<li class="bullet-music"><a><i class="bi bi-play-fill"></i>Liên hệ</a></li>
+
+				</div>
+			</div>
+
+			<div class="footer-information">
+
+				<div class="footer-policy">
+					<h5>CHÍNH SÁCH KHÁCH HÀNG</h5>
+
+					<li class="bullet-music"><a><i class="bi bi-play-fill"></i>Chính sách khách hàng thân thiết</a></li>
+					<li class="bullet-music"><a><i class="bi bi-play-fill"></i>Chính sách đối trả</a></li>
+					<li class="bullet-music"><a><i class="bi bi-play-fill"></i>Chính sách bảo hành</a></li>
+					<li class="bullet-music"><a><i class="bi bi-play-fill"></i>Chính sách bảo mật</a></li>
+					<li class="bullet-music"><a><i class="bi bi-play-fill"></i>Câu hỏi thường gặp</a></li>
+					<li class="bullet-music"><a><i class="bi bi-play-fill"></i>Hướng dẫn mua hàng online</a></li>
+					<li class="bullet-music"><a><i class="bi bi-play-fill"></i>Hướng dẫn kiểm tra hạng thành viên</a></li>
+
+				</div>
+			</div>
+			<div class="footer-information">
+
+				<div class="footer-info">
+					<h5>THÔNG TIN CỬA HÀNG</h5>
+
+					<h6><i class="bi bi-play-fill"></i>Cửa hàng thứ 1</h6>
+					<li class="bullet-music" style="margin-left:20px"><a>F15 tầng 1 AEON Mall Tân Phú, 30 Bờ Bao Tân Thắng, Phường Sơn Kỳ, TP Hồ Chí Minh</a></li>
+					<h6><i class="bi bi-play-fill"></i>Cửa hàng thứ 2</h6>
+					<li class="bullet-music" style="margin-left:20px"><a>809 Giải Phóng, Phường Giáp Bát, Quận Hoàng Mai, TP Hà Nội</a></li>
+					<h6><i class="bi bi-play-fill"></i>Cửa hàng thứ 3</h6>
+					<li class="bullet-music" style="margin-left:20px"><a>192 - 194 Hoa Lan, Phường 2, Quận Phú Nhuận, TP Hồ Chí Minh</a></li>
+
+
+				</div>
+			</div>
+		</div>
+
+	</footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+
+<style>
+	.navbar {
+		padding: 10px 50px;
+	}
+
+	.nav-link {
+		font-size: 18px;
+	}
+
+	.navbar-nav .nav-item .nav-link:hover {
+		text-decoration: underline; /* Thêm text-decoration khi hover */
+	}
+
+	.icon {
+		font-size: 22px;
+		margin-left: 14px;
+	}
+
+	.page-footer {
+		padding: 60px 0;
+		background-color: #f8f8f8;
+		font-weight: auto;
+		font-size: 14px;
+		line-height: 17px;
+		color: #000;
+		margin-top: auto;
+	}
+
+
+
+	.list-footer-information {
+		color: #212529;
+		font-family: "Roboto Condensed", sans-serif;
+		grid-area: auto;
+		line-height: 24px;
+		display: flex;
+		margin-left: 45px;
+		margin-right: 45px;
+		max-width: 1800px;
+		max-height: 450px;
+	}
+
+	.footer-information {
+		font-size: 14px;
+		line-height: 20px;
+		text-align: left;
+		flex: 0 0 24%;
+		margin: 10px;
+	}
+
+	.footer-information-logo {
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}
+
+	.footer-company {
+		font-size: 14px;
+		line-height: 17px;
+	}
+
+		.footer-company .bullet-music {
+			list-style-type: none; /* Ẩn dấu chấm */
+		}
+
+			.footer-company .bullet-music i {
+				color: #f0b67f;
+			}
+
+	.footer-policy .bullet-music i {
+		color: #f0b67f;
+	}
+
+	.footer-info i {
+		color: #f0b67f;
+	}
+
+	.footer-info .bullet-music {
+		list-style-type: none;
+	}
+
+	.footer-policy .bullet-music {
+		list-style-type: none; /* Ẩn dấu chấm */
+	}
+
+	.footer-info .bullet-music {
+		list-style-type: none; /* Ẩn dấu chấm */
+	}
+
+	.footer-information .footer-company h5:after {
+		content: "";
+		background: #E1E1E1;
+		height: 6px; /* Đặt chiều cao mong muốn */
+		width: 80px; /* Đặt chiều rộng mong muốn */
+		display: block;
+		margin-top: -6px;
+		margin-right: -10px;
+	}
+
+	*:before, *:after {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	.footer-information .footer-policy h5:after {
+		content: "";
+		background: #E1E1E1;
+		height: 6px; /* Đặt chiều cao mong muốn */
+		width: 230px; /* Đặt chiều rộng mong muốn */
+		display: block;
+		margin-top: -6px;
+		margin-right: -10px;
+	}
+
+	.footer-information .footer-info h5:after {
+		content: "";
+		background: #E1E1E1;
+		height: 6px; /* Đặt chiều cao mong muốn */
+		width: 200px; /* Đặt chiều rộng mong muốn */
+		display: block;
+		margin-top: -6px;
+		margin-right: -10px;
+	}
+
+</style>
+
+

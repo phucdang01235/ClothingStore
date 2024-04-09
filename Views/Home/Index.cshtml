@@ -1,0 +1,122 @@
+﻿@model IEnumerable<ClothingStore.Models.Entity.Product>
+@{
+    ViewData["Title"] = "Home Page";
+    var manProducts = Model.Where(i => i.Gender.Equals("Nam") && i.Category.Name.Equals("Áo Nam")).ToList();
+    var womenProducts = Model.Where(i => i.Gender.Equals("Nữ") && i.Category.Name.Equals("Quần Nữ")).ToList();
+}
+
+<partial name="../Component/_Banner" />
+
+<div class="container">
+    <div class="block my-5">
+        <div class="block-title">
+            <strong>Thời trang Nam</strong>
+        </div>
+        <div class="row block-body">
+            @for(int i = 0; i < 4; i++)
+            {
+                <div class="col-3">
+                    <div class="card p-0 shadow" style="width: 18rem;">
+                        <img src="@manProducts[i].ProductImages[0].ImageUrl" class="card-img-top">
+                        <div class="card-body px-4 align-items-">
+                            <h6 class="card-title" style="min-height: 40px;">@manProducts[i].Name</h6>
+                            <p class="card-text">@manProducts[i].UnitPrice VNĐ</p>
+                            <div class="action d-flex justify-content-between">
+
+                                <a asp-controller="Wishlist" asp-action="AddToWishlist" asp-route-productId="@manProducts[i].ProductId"><i class="bi bi-heart icon"></i></a>
+
+                                <a asp-controller="ShoppingCart" asp-action="AddToShoppingCartFromProduct" asp-route-productId="@manProducts[i].ProductId"><i class="bi bi-cart3 icon"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="text-center mt-4">
+            <a href="#" class="btn-readmore">XEM THÊM</a>
+        </div>
+    </div>
+
+    <div class="block my-5">
+        <div class="block-title">
+            <strong>Thời trang Nữ</strong>
+        </div>
+        <div class="row block-body">
+            @for (int i = 0; i < 4; i++)
+            {
+                <div class="col-3">
+                    <div class="card p-0 shadow" style="width: 18rem;">
+                        <img src="@womenProducts[i].ProductImages[0].ImageUrl" class="card-img-top">
+                        <div class="card-body px-4 align-items-">
+                            <a class="card-title" style="min-height: 40px;" asp-controller="Product" asp-action="RedirectToProductsView">@womenProducts[i].Name</a>
+                            <p class="card-text">@womenProducts[i].UnitPrice VNĐ</p>
+                            <div class="action d-flex justify-content-between">
+
+                                <a asp-controller="Wishlist" asp-action="AddToWishlist" asp-route-productId="@womenProducts[i].ProductId"><i class="bi bi-heart icon"></i></a>
+
+                                <a asp-controller="ShoppingCart" asp-action="AddToShoppingCartFromProduct" asp-route-productId="@womenProducts[i].ProductId"><i class="bi bi-cart3 icon"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="text-center mt-4">
+            <a href="#" class="btn-readmore">XEM THÊM</a>
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+    .icon {
+        font-size: 22px;
+        margin: 0px;
+    }
+
+    .block-title {
+        margin: 0 auto 37px;
+        position: relative;
+        width: fit-content;
+        text-align: center;
+    }
+
+    .block-title strong {
+        display: inline-block;
+        position: relative;
+        font-size: 36px;
+        font-weight: 700;
+        text-transform: uppercase;
+        z-index: 2;
+    }
+
+    .block-title:after {
+        content: "";
+        left: -17px;
+        right: -17px;
+        background: #e1e1e1;
+        position: absolute;
+        height: 10px;
+        bottom: 10px;
+    }
+
+    .btn-readmore {
+        display: inline-block;
+        padding: 10px 20px !important;
+        border: 1px black solid;
+        font-weight: 700;
+        border-radius: 10px;
+    }
+
+    .btn-readmore:hover {
+        background-color: black;
+        color: white;
+    }
+
+</style>
+
+
+
