@@ -13,7 +13,17 @@ namespace ClothingStore.Models.Service.wishlist
 
         public async Task AddAsync(Wishlist wishlist)
         {
-            _context.Wishlists.Add(wishlist);
+            var wishlists = await _context.Wishlists.ToListAsync();
+            var wishlistExisting =  wishlists.FirstOrDefault(i => i.ProductId == wishlist.ProductId && i.UserId == wishlist.UserId);
+            if (wishlistExisting == null)
+            {
+                _context.Wishlists.Add(wishlist);
+            }
+            else
+            {
+                wishlistExisting.Quantity += 1;
+            }
+
             await _context.SaveChangesAsync();
         }
 

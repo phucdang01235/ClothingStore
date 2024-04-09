@@ -175,8 +175,8 @@
                             <a asp-controller="Product" asp-action="Detail" asp-route-productId="@wishlist.ProductId">
                                 @if (wishlist.Product.ProductImages?[0].ImageUrl != null)
                                 {
-                                    @* <img src="@wishlist.ProductImages[0].ImageUrl" /> *@
-                                    <img src="/images/tst1.jpg" />
+                                    <img src="@wishlist.Product.ProductImages?[0].ImageUrl" />
+                                   
                                 }
                                 else
                                 {
@@ -198,7 +198,7 @@
                                 <p class="wishlist-price">@wishlist.UnitPrice VNĐ</p>
                                 <form asp-controller="ShoppingCart" asp-action="AddToShoppingCart" method="post">
                                     <input value="@wishlist.ProductId" name="productId" hidden>
-                                    <input class="myNumber" type="number" min="1" value="1" name="quantity" />
+                                    <input class="myNumber" type="number" min="1" value="@wishlist.Quantity" name="quantity" />
                                     <button class="add-shopping-cart p-2 d-block text-center" type="submit">
                                         Thêm vào giỏ hàng
                                     </button>
@@ -229,8 +229,7 @@
                                 <a asp-controller="Product" asp-action="Detail" asp-route-productId="@shoppingCart.Items[i].ProductId">
                                     @if (shoppingCart.Items[i].Product.ProductImages?[0].ImageUrl != null)
                                     {
-                                        @* <img src="@wishlist.ProductImages[0].ImageUrl" /> *@
-                                        <img src="/images/tst1.jpg" />
+                                        <img src="@shoppingCart.Items[i].Product.ProductImages[0].ImageUrl" />
                                     }
                                     else
                                     {

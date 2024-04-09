@@ -30,7 +30,7 @@ namespace ClothingStore.Controllers
             return View();
         }
 
-        public async Task AddToWishlist(int productId) 
+        public async Task<IActionResult> AddToWishlist(int productId) 
         {
             var user = await _userManager.GetUserAsync(User);
             var wishList = new Wishlist
@@ -40,6 +40,10 @@ namespace ClothingStore.Controllers
             };
             await _wishlistService.AddAsync(wishList);
 
+            var wishlists = await _wishlistService.GetAllAsync(user.Id);
+            HttpContext.Session.SetObjectAsJson("Wishlists", wishlists);
+
+            return RedirectToAction("Index", "Home");
         }
 
         public async Task<IActionResult> RemoveFromWishlist(int productId)
