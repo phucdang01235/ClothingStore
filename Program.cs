@@ -17,7 +17,14 @@ builder.Services.AddIdentity<User, IdentityRole>()
     .AddEntityFrameworkStores<ClothingStoreDbContext>();
 builder.Services.AddRazorPages();
 
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = $"/Identity/Account/Login";
+    options.LogoutPath = $"/Identity/Pages/Account/Logout";
+    options.LogoutPath = $"/Identity/Pages/Account/AccessDenied";
+});
 
+builder.Services.AddControllersWithViews();
 
 // Add services to the container.
 builder.Services.AddScoped<IProductService, ProductService>();
@@ -26,8 +33,6 @@ builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IOrderDetailService, OrderDetailService>();
 
 
-builder.Services.AddControllersWithViews();
-
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
@@ -35,7 +40,6 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
-
 
 
 var app = builder.Build();
@@ -49,6 +53,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
 app.UseStaticFiles();
 
 app.UseSession();
@@ -59,8 +64,14 @@ app.UseAuthorization();
 
 app.MapRazorPages();
 
+
+app.MapControllerRoute(
+            name: "Admin",
+            pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+          );
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Login}/{action=RedirectToView}/{id?}"
+    );
 
 app.Run();

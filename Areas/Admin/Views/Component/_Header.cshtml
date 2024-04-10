@@ -1,0 +1,150 @@
+﻿@using ClothingStore.Models
+@using ClothingStore.Models.Entity
+@using ClothingStore.Models.Helper;
+@using Microsoft.AspNetCore.Http;
+
+<header>
+    this is header
+</header>
+
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+        padding: 0 !important;
+    }
+
+    .navbar {
+        padding: 10px 50px;
+    }
+
+    .nav-link {
+        font-size: 18px;
+    }
+
+    .navbar-nav .nav-item .nav-link:hover {
+        text-decoration: underline; /* Thêm text-decoration khi hover */
+    }
+
+    .icon {
+        font-size: 22px;
+        margin-left: 14px;
+    }
+
+    .dropdown-custom {
+        left: unset !important;
+        top: 190% !important;
+        right: 0;
+    }
+
+    .dropdown-tittle {
+        font-weight: 600;
+        border-bottom: 1px solid black;
+    }
+
+    .dropdown-link {
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+
+        .dropdown-link:hover {
+            text-decoration: underline 2px;
+        }
+
+    .dropdown-table {
+        padding: 0px 12px 0px 12px;
+    }
+
+        .dropdown-table li {
+            margin-bottom: 6px;
+        }
+
+    .dropdown-toggle-account::after {
+        display: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .offcanvas-header {
+        padding: 42px 50px 37px;
+    }
+
+    .offcanvas-title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        color: black;
+        border: none;
+        position: relative;
+        margin: 0;
+    }
+
+    .offcanvas-body {
+        padding: 0 50px;
+    }
+
+    .wishlist-header {
+        font-size: 17px;
+        text-transform: capitalize;
+        line-height: 30px;
+        margin-bottom: 16px;
+    }
+
+        .wishlist-header a:hover {
+            text-decoration: underline;
+        }
+
+    .offcanvas-body a img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .wishlist-price {
+        font-weight: 700;
+        line-height: 20px;
+    }
+
+    .add-shopping-cart {
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 25px;
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+    }
+
+        .add-shopping-cart:hover {
+            color: white;
+            background-color: black;
+        }
+
+    .offcanvas-header > h1 > i {
+        margin-right: 16px;
+    }
+
+    .offcanvas-bottom {
+        padding: 20px 50px 30px;
+    }
+
+    .sub-total,
+    .sub-action {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .a-remove-wishlist {
+        position: absolute;
+        right: -16px;
+        background-color: black;
+        color: white;
+        width: 30px;
+        text-align: center;
+        border-radius: 18px;
+    }
+</style>

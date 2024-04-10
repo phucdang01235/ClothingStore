@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1y98RLpD/O/+qkHd9+dVbJ53otlnv4nBw2UTQnVrO8s=",
+  "Hash": "5CVumBbvWO645OdnjLFLIyKn32Xd0mn2QcaGjWFHTbA=",
   "Source": "ClothingStore",
   "BasePath": "_content/ClothingStore",
   "Mode": "Default",
@@ -1103,6 +1103,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\dangt\\OneDrive\\Desktop\\LT_Website\\code\\ClothingStore\\ClothingStore\\wwwroot\\images\\admin.png",
+      "SourceId": "ClothingStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dangt\\OneDrive\\Desktop\\LT_Website\\code\\ClothingStore\\ClothingStore\\wwwroot\\",
+      "BasePath": "_content/ClothingStore",
+      "RelativePath": "images/admin.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\admin.png"
     },
     {
       "Identity": "C:\\Users\\dangt\\OneDrive\\Desktop\\LT_Website\\code\\ClothingStore\\ClothingStore\\wwwroot\\images\\banner\\banner1.jpg",

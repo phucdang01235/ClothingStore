@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@using ClothingStore.Models.Entity
+
+@inject UserManager<User> UserManager
+@inject SignInManager<User> SignInManager
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -15,11 +21,7 @@
 
 </head>
 <body>
-	@if (Context.User.Identity.IsAuthenticated)
-	{
-		<partial name="../Component/_Header" />
-	}
-	
+	<partial name="../Component/_Header" />
 
     <div>
         <main role="main" class="pb-3">

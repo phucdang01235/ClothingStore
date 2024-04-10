@@ -26,7 +26,7 @@ namespace ClothingStore.Controllers
 
         [Authorize(Roles = "User")]
         public async Task<IActionResult> Index()
-        {
+        { 
          
             if (HttpContext.Session.GetObjectFromJson<IEnumerable<Wishlist>>("Wishlists") == null)
             {

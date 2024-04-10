@@ -868,3 +868,4 @@ C:\Users\dangt\OneDrive\Desktop\LT_Website\code\ClothingStore\ClothingStore\obj\
 C:\Users\dangt\OneDrive\Desktop\LT_Website\code\ClothingStore\ClothingStore\obj\Debug\net7.0\ClothingStore.pdb
 C:\Users\dangt\OneDrive\Desktop\LT_Website\code\ClothingStore\ClothingStore\obj\Debug\net7.0\ClothingStore.genruntimeconfig.cache
 C:\Users\dangt\OneDrive\Desktop\LT_Website\code\ClothingStore\ClothingStore\obj\Debug\net7.0\ref\ClothingStore.dll
+C:\Users\dangt\OneDrive\Desktop\LT_Website\code\ClothingStore\ClothingStore\obj\Debug\net7.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css

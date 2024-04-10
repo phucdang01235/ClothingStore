@@ -7,6 +7,7 @@ namespace ClothingStore.Models.Entity
     public class ShoppingCart
     {
         public List<Wishlist> Items { get; set; } = new List<Wishlist>();
+
         public void AddItem(Wishlist item)
         {
             var existingItem = Items.FirstOrDefault(i => i.ProductId == item.ProductId);
