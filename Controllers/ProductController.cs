@@ -3,6 +3,7 @@ using ClothingStore.Models.Helper;
 using ClothingStore.Models.Service.product;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 
 namespace ClothingStore.Controllers
 {
@@ -66,11 +67,16 @@ namespace ClothingStore.Controllers
 
         [Authorize(Roles = "User")]
         [HttpGet]
-        public async Task<IActionResult> Search(string keyword)
+        public async Task<IActionResult> Search(string keyword = "")
         {
-            var products = await _productService.Search(keyword);
-            HttpContext.Session.SetObjectAsJson("RedirectProducts", products);
-            return View("Index", products);
+            if (!keyword.IsNullOrEmpty())
+            {
+                var products = await _productService.Search(keyword);
+                HttpContext.Session.SetObjectAsJson("RedirectProducts", products);
+                return View("Index", products);
+            }
+            return RedirectToAction("Index", "Home");
+
         }
 
     }

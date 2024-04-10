@@ -33,7 +33,7 @@ public class ClothingStoreDbContext : IdentityDbContext<User>
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-
+        
         // Xác định khóa chính của OrderDetail
         modelBuilder.Entity<OrderDetail>()
             .HasKey(od => new { od.OrderId, od.ProductId });

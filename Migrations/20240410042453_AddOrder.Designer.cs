@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClothingStore.Migrations
 {
     [DbContext(typeof(ClothingStoreDbContext))]
-    [Migration("20240408110358_AddColumnUnitPrice")]
-    partial class AddColumnUnitPrice
+    [Migration("20240410042453_AddOrder")]
+    partial class AddOrder
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

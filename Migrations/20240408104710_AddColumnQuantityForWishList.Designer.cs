@@ -41,7 +41,7 @@ namespace ClothingStore.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("ClothingStore.Models.Entity.Order", b =>
+           /* modelBuilder.Entity("ClothingStore.Models.Entity.Order", b =>
                 {
                     b.Property<int>("OrderId")
                         .ValueGeneratedOnAdd()
@@ -80,8 +80,8 @@ namespace ClothingStore.Migrations
 
                     b.ToTable("Orders");
                 });
-
-            modelBuilder.Entity("ClothingStore.Models.Entity.OrderDetail", b =>
+*/
+           /* modelBuilder.Entity("ClothingStore.Models.Entity.OrderDetail", b =>
                 {
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
@@ -104,7 +104,7 @@ namespace ClothingStore.Migrations
 
                     b.ToTable("OrderDetails");
                 });
-
+*/
             modelBuilder.Entity("ClothingStore.Models.Entity.Product", b =>
                 {
                     b.Property<int>("ProductId")
@@ -414,7 +414,7 @@ namespace ClothingStore.Migrations
 
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
-
+/*
             modelBuilder.Entity("ClothingStore.Models.Entity.Order", b =>
                 {
                     b.HasOne("ClothingStore.Models.Entity.User", "User")
@@ -444,7 +444,7 @@ namespace ClothingStore.Migrations
 
                     b.Navigation("Product");
                 });
-
+*/
             modelBuilder.Entity("ClothingStore.Models.Entity.Product", b =>
                 {
                     b.HasOne("ClothingStore.Models.Entity.Category", "Category")
@@ -561,11 +561,11 @@ namespace ClothingStore.Migrations
                     b.Navigation("Products");
                 });
 
-            modelBuilder.Entity("ClothingStore.Models.Entity.Order", b =>
+        /*    modelBuilder.Entity("ClothingStore.Models.Entity.Order", b =>
                 {
                     b.Navigation("OrderDetails");
                 });
-
+*/
             modelBuilder.Entity("ClothingStore.Models.Entity.Product", b =>
                 {
                     b.Navigation("ProductImages");
@@ -580,12 +580,12 @@ namespace ClothingStore.Migrations
                     b.Navigation("ProductSizes");
                 });
 
-            modelBuilder.Entity("ClothingStore.Models.Entity.User", b =>
+        /*    modelBuilder.Entity("ClothingStore.Models.Entity.User", b =>
                 {
                     b.Navigation("Orders");
 
                     b.Navigation("Wishlists");
-                });
+                });*/
 #pragma warning restore 612, 618
         }
     }
