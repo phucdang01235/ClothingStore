@@ -1,0 +1,41 @@
+﻿<nav class="shadow box-shadow bg-white p-0">
+    <div class="navigation container p-0">
+        <ul>
+            <li>
+                <a asp-area="Admin" asp-controller="Home" asp-action="Dashboard">
+                    <i class="bi bi-pc-display-horizontal"></i> Bảng Điều Khiển
+                </a>
+            </li>
+            <li>
+                <a asp-area="Admin" asp-controller="User" asp-action="Index">
+                    <i class="bi bi-people"></i> Quản Lý Người Dùng
+                </a>
+            </li>
+            <li>
+                <a asp-area="Admin" asp-controller="Statistics" asp-action="Index">
+                    <i class="bi bi-bar-chart-line"></i> Thống Kê Và Báo Cáo
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<style> 
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navigation ul li {
+        padding: 24px;
+        margin-right: 40px;
+    }
+
+    ul li a {
+        color: rgb(142,146,153);
+        text-decoration: none;
+    }
+</style>

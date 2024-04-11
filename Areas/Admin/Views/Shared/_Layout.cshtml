@@ -15,20 +15,11 @@
 
 </head>
 <body>
-	<header class="">
-		<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 p-0">
-            <div class="container-fluid" style="background-color: rgb(59,62,71) !important; color: rgb(157,159,171) !important;">
-                <button type="button" class="border-0" asp-area="Admin" asp-controller="Home" asp-action="Index">
-                    <i class="bi bi-person-gear admin-icon"></i>
-                </button>
-				<div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">					
-					<partial name="_LoginPartial" />
-				</div>
-			</div>
-		</nav>
-	</header>
+	<partial name="../Component/_Header" />
+    <partial name="../Component/_Navigation" />
+
     <div>
-        <main role="main" class="pb-3">
+        <main role="main" class="p-5" style="background-color: rgb(243,243,243);">
             @RenderBody()
         </main>
     </div>
