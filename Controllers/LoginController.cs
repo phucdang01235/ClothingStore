@@ -1,9 +1,11 @@
 ﻿using ClothingStore.Models.Entity;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ClothingStore.Controllers
 {
+    [Authorize]
     public class LoginController : Controller
     {
         private readonly UserManager<User> _userManager;
@@ -13,6 +15,7 @@ namespace ClothingStore.Controllers
             _userManager = userManager;
         }
 
+        
         public async Task<IActionResult> RedirectToView()
         {
             var user = await _userManager.GetUserAsync(User);
