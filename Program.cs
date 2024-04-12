@@ -5,6 +5,7 @@ using ClothingStore.Models.Service.product;
 using ClothingStore.Models.Service.wishlist;
 using ClothingStore.Models.Service.order;
 using ClothingStore.Models.Service.orderdetail;
+using ClothingStore.Models.Service.vnpay;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -41,6 +42,7 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
+builder.Services.AddSingleton<IVnPayService, VnPayService>(); // Add Singleton
 
 var app = builder.Build();
 

@@ -1,7 +1,7 @@
 ﻿
 <div class="p-5">
     <h2 class="text-center">Checkout</h2>
-    <form asp-controller="ShoppingCart" asp-action="Checkout" method="post">
+    <form asp-controller="Order" asp-action="Checkout" method="post">
         <div class="form-group">
             <label>Shipping Address</label>
             <input name="shippingAddress" class="form-control" />
@@ -10,7 +10,9 @@
             <label>Notes</label>
             <textarea name="note" class="form-control"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary w-100 mt-3">Place Order</button>
+        <input type="submit" name="payment" class="btn btn-primary w-100 mt-3" value="Đặt Hàng (COD)">
+        <input type="submit" name="payment" class="btn btn-primary w-100 mt-3" value="Thanh toán VNPAY">
+        
     </form>
 </div>
 

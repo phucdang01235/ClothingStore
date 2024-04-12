@@ -1,9 +1,11 @@
-﻿using ClothingStore.Models.DTO;
+﻿using ClothingStore.Models;
+using ClothingStore.Models.DTO;
 using ClothingStore.Models.Entity;
 using ClothingStore.Models.Helper;
 using ClothingStore.Models.Service.order;
 using ClothingStore.Models.Service.orderdetail;
 using ClothingStore.Models.Service.product;
+using ClothingStore.Models.Service.vnpay;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -19,13 +21,16 @@ namespace ClothingStore.Controllers
         private readonly IOrderDetailService _orderDetailService;
         private readonly UserManager<User> _userManager;
         private readonly IProductService _productService;
+        private readonly IVnPayService _vnPayService;
         public ShoppingCartController(
             UserManager<User> userManager,
             IProductService productService,
             IOrderService ordreService,
-            IOrderDetailService orderDetailService)
+            IOrderDetailService orderDetailService,
+            IVnPayService vnPayService)
         {
             _ordreService = ordreService;
+            _vnPayService = vnPayService;
             _orderDetailService = orderDetailService;
             _userManager = userManager;
             _productService = productService;
@@ -107,49 +112,7 @@ namespace ClothingStore.Controllers
         }
 
 
-        public async Task Checkout(string note, string shippingAddress)
-        {
-            List<OrderDetailDTO> orderDetailDTO = HttpContext.Session.GetObjectFromJson<List<OrderDetailDTO>>("OrderDetailDTO");
-            var shoppingCart = HttpContext.Session.GetObjectFromJson<ShoppingCart>("ShoppingCart");
-            var user = await _userManager.GetUserAsync(User);
-            var order = new Order
-            {
-                Fullname = user.FullName,
-                Email = user.Email,
-                OrderDate = DateTime.Now,
-                PhoneNumber = user.PhoneNumber,
-                UserId = user.Id,
-                TotalMoney = (double?)shoppingCart.TotalPrice,
-                Note = note,
-                Address = shippingAddress, // Địa chỉ giao hàng
-            };
-
-            // Thêm Order
-            await _ordreService.AddAsync(order);
-
-            // Thêm OrderDetails
-            for (int i = 0; i < orderDetailDTO.Count; i++)
-            {
-                var orderDetail = new OrderDetail
-                {
-                    OrderId = order.OrderId,
-                    ProductId = orderDetailDTO[i].ProductId,
-                    NumberOfProduct = orderDetailDTO[i].NumberOfProduct,
-                    UnitPrice = orderDetailDTO[i].UnitPrice,
-                    Amount = orderDetailDTO[i].UnitPrice * orderDetailDTO[i].NumberOfProduct
-                };
-                await _orderDetailService.AddAsync(orderDetail);
-            }
-
-            /*return View();*/ // Chưa làm thanh toán momo và thanh toán xong mới lưu
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> CheckoutCompleting(List<OrderDetailDTO> orderDetailDTO)
-        {
-            HttpContext.Session.SetObjectAsJson("OrderDetailDTO", orderDetailDTO);
-            return View();
-        }
+ 
 
     }
 }

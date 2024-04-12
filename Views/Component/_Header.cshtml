@@ -218,7 +218,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <p class="d-block" style="padding: 0 50px;">@shoppingCart.Items.Count Sản phẩm</p>
-        <form asp-controller="ShoppingCart" asp-action="CheckoutCompleting" method="post">
+        <form asp-controller="Order" asp-action="CheckoutCompleting" method="post">
             <div class="offcanvas-body" style="height: 66%; overflow-y: auto;">
                 <div class="row position-relative">
                     @if (shoppingCart.Items.Count > 0)
