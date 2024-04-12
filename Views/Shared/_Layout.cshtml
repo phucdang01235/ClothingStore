@@ -21,8 +21,11 @@
 
 </head>
 <body>
-	<partial name="../Component/_Header" />
-
+	@if (SignInManager.IsSignedIn(User))
+	{
+		<partial name="../Component/_Header" />
+	}
+	
     <div>
         <main role="main" class="pb-3">
             @RenderBody()

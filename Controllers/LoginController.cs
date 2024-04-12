@@ -19,7 +19,7 @@ namespace ClothingStore.Controllers
         public async Task<IActionResult> RedirectToView()
         {
             var user = await _userManager.GetUserAsync(User);
-            var userRole = _userManager.GetRolesAsync(user).Result;
+            var userRole = await _userManager.GetRolesAsync(user);
             if (userRole[0].Equals("Admin"))
             {
                 return Redirect("/Admin/Home/Index");
