@@ -1,8 +1,16 @@
 ﻿@model IEnumerable<ClothingStore.Models.Entity.Product>
+@using ClothingStore.Models.Service.product
+@using ClothingStore.Models.Entity
+@using Microsoft.AspNetCore.Identity
+
+@inject IProductService _productService
+@inject UserManager<User> _userManager
+    
 @{
     ViewData["Title"] = "Home Page";
     var manProducts = Model.Where(i => i.Gender.Equals("Nam") && i.Category.Name.Equals("Áo Nam")).ToList();
     var womenProducts = Model.Where(i => i.Gender.Equals("Nữ") && i.Category.Name.Equals("Quần Nữ")).ToList();
+    var user = await _userManager.GetUserAsync(User);
 }
 
 <partial name="../Component/_Banner" />
@@ -21,9 +29,19 @@
                         <div class="card-body px-4 align-items-">
                             <h6 class="card-title" style="min-height: 40px;">@manProducts[i].Name</h6>
                             <p class="card-text">@manProducts[i].UnitPrice VNĐ</p>
-                            <div class="action d-flex justify-content-end">
+                            <div class="action d-flex justify-content-between">
                                 <div>
-                                    <a asp-controller="Product" asp-action="LikeProduct" asp-route-productId="@manProducts[i].ProductId"><i class="bi bi-heart icon"></i></a>
+                                    <a asp-controller="Product" asp-action="LikeProduct" asp-route-productId="@manProducts[i].ProductId">
+                                        @if (_productService.IsLikeProduct(manProducts[i].ProductId, user.Id))
+                                        {
+                                            <i class="bi bi-star-fill"></i>
+                                        }
+                                        else
+                                        {
+                                            <i class="bi bi-star icon"></i>
+                                        }
+
+                                    </a>
                                 </div>
 
                                 <div>
@@ -41,7 +59,7 @@
         <div class="text-center mt-4">
             <a href="#" class="btn-readmore">XEM THÊM</a>
         </div>
-    </div>
+    </div>  
 
     <div class="block my-5">
         <div class="block-title">
@@ -56,9 +74,18 @@
                         <div class="card-body px-4 align-items-">
                             <a class="card-title" style="min-height: 40px;" asp-controller="Product" asp-action="RedirectToProductsView">@womenProducts[i].Name</a>
                             <p class="card-text">@womenProducts[i].UnitPrice VNĐ</p>
-                            <div class="action d-flex justify-content-end">
+                            <div class="action d-flex justify-content-between">
                                 <div>
-                                    <a asp-controller="Product" asp-action="LikeProduct" asp-route-productId="@manProducts[i].ProductId"><i class="bi bi-heart icon"></i></a>
+                                    <a asp-controller="Product" asp-action="LikeProduct" asp-route-productId="@womenProducts[i].ProductId">
+                                        @if (_productService.IsLikeProduct(womenProducts[i].ProductId, user.Id))
+                                        {
+                                            <i class="bi bi-star-fill"></i>
+                                        }
+                                        else
+                                        {
+                                            <i class="bi bi-star icon"></i>
+                                        }
+                                    </a>
                                 </div>
                                 <div>
                                     <a asp-controller="Wishlist" asp-action="AddToWishlist" asp-route-productId="@womenProducts[i].ProductId"><i class="bi bi-heart icon"></i></a>

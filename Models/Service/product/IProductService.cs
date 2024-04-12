@@ -8,7 +8,8 @@ namespace ClothingStore.Models.Service.product
         Task<IEnumerable<Product>> GetAllAsync();
         Task<IEnumerable<Product>> GetProductByCategoryName(string category);
         Task<IEnumerable<Product>> Search(string keyword);
-        Task LikeProduct(int productId, string userId);
+        Task LikeProduct(Like like);
+        bool IsLikeProduct(int productId, string userId);
         Task AddAsync(Product product);
         Task DeleteAsync(int id);
         Task UpdateAsync(int id, Product product);

@@ -12,7 +12,7 @@ public class ClothingStoreDbContext : IdentityDbContext<User>
         : base(options)
     {
     }
-
+    public DbSet<Like> Likes { get; set; }
     public DbSet<Category> Categories { get; set; }
 
     public DbSet<Order> Orders { get; set; }
@@ -45,6 +45,10 @@ public class ClothingStoreDbContext : IdentityDbContext<User>
         // Xác định khóa chính của Wishlist
         modelBuilder.Entity<ProductSize>()
             .HasKey(od => new { od.ProductId, od.SizeId });
+
+        // Xác định khóa chính của Like
+        modelBuilder.Entity<Like>()
+            .HasKey(od => new { od.ProductId, od.UserId });
 
         base.OnModelCreating(modelBuilder);
     }

@@ -29,9 +29,17 @@ namespace ClothingStore.Models.Service.product
             return products;
         }
 
-        public async Task LikeProduct(int productId, string userId)
+        public async Task LikeProduct(Like like)
         {
-
+            if(_context.Likes.Contains(like)) 
+            {
+                _context.Likes.Remove(like);
+            }
+            else
+            {
+                await _context.Likes.AddAsync(like);
+            }
+            await _context.SaveChangesAsync();
         }
 
         public async Task<Product> GetByIdAsync(int id)
@@ -67,6 +75,16 @@ namespace ClothingStore.Models.Service.product
         public async Task<IEnumerable<Product>> Search(string keyword)
         {
             return await _context.Products.Include(i => i.ProductImages).Where(i => i.Name.ToLower().Contains(keyword.ToLower())).ToListAsync();
+        }
+
+        public bool IsLikeProduct(int productId, string userId)
+        {
+            Like like = new Like()
+            {
+                ProductId = productId,
+                UserId = userId
+            };
+            return _context.Likes.Contains(like);
         }
     }
 }

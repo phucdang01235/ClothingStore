@@ -87,7 +87,14 @@ namespace ClothingStore.Controllers
         public async Task<IActionResult> LikeProduct(int productId)
         {
             var user = await _userManager.GetUserAsync(User);
-            return View(user);
+            Like like = new Like
+            { 
+                UserId = user.Id,
+                ProductId = productId
+            };
+            await _productService.LikeProduct(like);
+
+            return RedirectToAction("Index", "Home");
         }
 
 

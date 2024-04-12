@@ -24,7 +24,7 @@ namespace ClothingStore.Controllers
             {
                 return Redirect("/Admin/Home/Index");
             }
-
+            
             return RedirectToAction("Index", "Home");
         }
 
