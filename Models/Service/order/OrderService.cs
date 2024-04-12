@@ -13,7 +13,10 @@ namespace ClothingStore.Models.Service.order
 
         public async Task<IEnumerable<Order>> GetOrdersByUserId(string userId)
         {
-            return await _context.Orders.Where(i => i.UserId == userId).ToListAsync();
+            return await _context.Orders
+                .Include(i => i.OrderDetails)
+                .Where(i => i.UserId == userId)
+                .ToListAsync();
         }
         public async Task AddAsync(Order order)
         {

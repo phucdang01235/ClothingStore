@@ -1,0 +1,89 @@
+﻿@model IEnumerable<ClothingStore.Models.Entity.Order>
+
+@{
+    var ss ="fsd";
+}
+<div class="container">
+    <div class="p-5 my-5 border rounded" style="font-size: 20px;">
+        <h5>LỊCH SỬ MUA HÀNG</h5>
+        <hr />
+        <table class="table" >
+            <thead style="border-bottom: 2px black solid;">
+                <tr>
+                    <th>
+                        Tên đầy đủ
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Số điện thoại
+                    </th>
+                    <th>
+                        Địa chỉ
+                    </th>
+                    <th>
+                        Ghi chú
+                    </th>
+                    <th>
+                        Tổng tiền
+                    </th>
+                    <th>
+                        Ngày đặt hàng
+                    </th>
+                    <th>
+                        Chức năng
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @item.Fullname
+                        </td>
+                        <td>
+                            @item.Email
+                        </td>
+                        <td>
+                            @item.PhoneNumber
+                        </td>
+                        <td>
+                            @item.Address
+                        </td>
+                        <td>
+                            @item.Note
+                        </td>
+                        <td>
+                            @item.TotalMoney
+                        </td>
+                        <td>
+                            @item.OrderDate
+                        </td>
+                        <td>
+                            
+                            <a
+                                asp-controller="Order"
+                                asp-action="GetOrderDetail"
+                                asp-route-orderId="@item.OrderId">
+                                Chi Tiết
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+   
+
+
+</div>
+
+
+<style>
+    table {
+        border: 1px black solid;
+        border-radius: 5px;
+    }
+</style>

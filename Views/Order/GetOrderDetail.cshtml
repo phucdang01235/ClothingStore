@@ -1,0 +1,60 @@
+﻿@model IEnumerable<ClothingStore.Models.Entity.OrderDetail>
+
+<div class="container p-5 my-4">
+    <h5 style="font-size: 24px; text-align: center; margin-bottom: 40px;">CHI TIẾT ĐƠN HÀNG</h5>
+    
+    <table class="table">
+        <thead style="border-bottom: 2px black solid">
+            <tr>
+                <th>
+                    Ảnh sản phẩm
+                </th>
+                <th>
+                    Tên sản phẩm
+                </th>
+                <th>
+                    Số lượng mua
+                </th>
+                <th>
+                    Đơn giá
+                </th>
+                <th>
+                    Tổng tiền
+                </th>                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <img src="@item.Product.ProductImages[0].ImageUrl">
+                    </td>
+                    <td>
+                        @item.Product.Name
+                    </td>
+                    <td>
+                        @item.NumberOfProduct
+                    </td>
+                    <td>
+                        @item.UnitPrice
+                    </td>
+                    <td>
+                        @item.Amount
+                    </td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<style>
+    img {
+        width: 100px;
+    }
+    td, th {
+        text-align: center;
+        font-size: 20px;
+    }
+</style>
