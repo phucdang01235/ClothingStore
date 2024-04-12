@@ -2,33 +2,37 @@
 using ClothingStore.Models.Helper;
 using ClothingStore.Models.Service.product;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 
 namespace ClothingStore.Controllers
 {
+    [Authorize(Roles = "User")]
     public class ProductController : Controller
     {
         private readonly IProductService _productService;
-        public ProductController(IProductService productService)
+        private readonly UserManager<User> _userManager;
+        public ProductController(IProductService productService, UserManager<User> userManager)
         {
             _productService = productService;
+            _userManager = userManager;
         }
 
-        [Authorize(Roles = "User")]
+        
         public IActionResult Index()
         {
             return View();
         }
 
-        [Authorize(Roles = "User")]
+        
         public async Task<IActionResult> Detail(int productId)
         {
             var product = await _productService.GetByIdAsync(productId);
             return View("Detail", product);
         }
 
-        [Authorize(Roles = "User")]
+        
         public async Task<IActionResult> RedirectToProductsView(string gender, string category)
         {
             var products = await _productService.GetProductByCategoryName(category);
@@ -36,12 +40,13 @@ namespace ClothingStore.Controllers
             {
                 products = products.Where(i => i.Gender.Equals(gender)).ToList();
             }
+
             HttpContext.Session.SetObjectAsJson("RedirectProducts", products);
 
             return View("Index", products);
         }
 
-        [Authorize(Roles = "User")]
+        
         [HttpPost]
         public async Task<IActionResult> SortBy(string sortBy = "")
         {
@@ -65,7 +70,7 @@ namespace ClothingStore.Controllers
             return View("Index", products);
         }
 
-        [Authorize(Roles = "User")]
+        
         [HttpGet]
         public async Task<IActionResult> Search(string keyword = "")
         {
@@ -78,6 +83,13 @@ namespace ClothingStore.Controllers
             return RedirectToAction("Index", "Home");
 
         }
+
+        public async Task<IActionResult> LikeProduct(int productId)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            return View(user);
+        }
+
 
     }
 }

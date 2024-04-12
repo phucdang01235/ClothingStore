@@ -1,3 +1,185 @@
-﻿<div class="container">
+﻿@using Microsoft.AspNetCore.Identity
+@using ClothingStore.Models.Entity
+@using Microsoft.AspNetCore.Http;
+@using ClothingStore.Models.Helper;
 
+@model IEnumerable<ClothingStore.Models.Entity.User>
+
+@inject UserManager<User> UserManager
+
+@{
+    var orders = Context.Session.GetObjectFromJson<IEnumerable<Order>>("Orders");
+}
+
+<div class="container">
+    <div class="row p-4 bg-white" style="font-size: 20px;">
+        <h5>DANH SÁCH NGƯỜI DÙNG</h5>
+        <hr />
+        <table class="table">
+            <thead style="border-bottom: 2px black solid;">
+                <tr>
+                    <th>Tên</th>
+                    <th>Email</th>
+                    <th>Quyền</th>
+                    <th>Phân quyền</th>
+                    <th>Chức năng</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.FullName</td>
+                        <td>@item.Email</td>
+                        <td>@UserManager.GetRolesAsync(item).Result[0]</td>
+                        <td>
+                            <form class="d-inline-block" asp-area="Admin" asp-controller="User" asp-action="UpdateRole" method="post">
+                                <input value="@item.Id" name="userId" hidden/>
+                                <input value="@UserManager.GetRolesAsync(item).Result[0]" name="oldRole" hidden/>
+                                <select asp-items="ViewBag.Roles" name="roleName"></select>
+                                <button type="submit">Cập nhập quyền</button>
+                            </form>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary"
+                                    id="btnDetail"
+                                    data-userId="@item.Id"
+                                    data-fullname="@item.FullName"
+                                    data-email="@item.Email"
+                                    data-phonenumber="@item.PhoneNumber"
+                                    data-address="@item.Address"
+                                    data-gender="@item.Gender"
+                                    data-roleName="@UserManager.GetRolesAsync(item).Result[0]"
+                                    type="button">
+                                Chi Tiết
+                            </button>
+                            <a class="btn btn-primary" style="line-height: 35px;"
+                               asp-area="Admin"
+                               asp-controller="Order"
+                               asp-action="GetOrdersByUserId"
+                               asp-route-userId="@item.Id">
+                                Xem Đơn Hàng     
+                            </a>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row gap-column-3 justify-content-between mt-5">
+        <div class=" col-5 bg-white p-4">
+            <h5>THÔNG TIN KHÁC</h5>
+            <hr />
+            <div class="information" id="information-id" hidden>
+                <ul class="row flex-column">
+                    <li>
+                        <p class="header-detail">Id : </p><span id="userId"></span>
+                    </li>
+                    <li>
+                        <p class="header-detail">Tên đầy đủ : </p><span id="fullname"></span>
+                    </li>
+                    <li>
+                        <p class="header-detail">Giới tính : </p>
+                        <span id="gender"></span>
+                    </li>
+                    <li>
+                        <p class="header-detail">Email : </p>
+                        <span id="email"></span>
+                    </li>
+                    <li>
+                        <p class="header-detail">Số điện thoại : </p>
+                        <span id="phonenumber"></span>
+                    </li>
+                    <li>
+                        <p class="header-detail">Địa chỉ : </p>
+                        <span id="address"></span>
+                    </li>
+                    <li>
+                        <p class="header-detail">Quyền : </p><span id="roleName"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-6 bg-white p-4">
+            <h5>ĐƠN HÀNG ĐÃ MUA</h5>
+            <hr />
+            <div class ="order-list">
+                <table class="table">
+                    <thead style="border-bottom: 2px black solid;">
+                        <tr>
+                            <th>Mã đơn hàng</th>
+                            <th>Tổng tiền</th>
+                            <th>Ngày đặt</th>
+                            <th>Chức năng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if(orders != null && orders.Any())
+                        {
+                            @foreach (var order in orders)
+                            {
+                                <tr>
+                                    <td>@order.OrderId</td>
+                                    <td>@order.TotalMoney</td>
+                                    <td>@order.OrderDate</td>
+                                    <td>
+                                        <a class="btn btn-primary" asp-area="Admin" asp-controller="Order" asp-action="GetOrdersByUserId" asp-route-userId="@order.OrderId">
+                                            Chi Tiết
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+<style>
+    .header-detail {
+        display: inline-block;
+        min-width: 150px;
+        font-weight: 700;
+    }
+
+    .information,
+    .order-list{
+        font-size: 20px;
+    }
+</style>
+
+<script>
+
+    document.querySelectorAll('#btnDetail').forEach(button => {
+        button.addEventListener("click", function () {
+
+            var informationElement = document.getElementById("information-id");
+            if (informationElement.hasAttribute("hidden")) {
+                informationElement.removeAttribute("hidden");
+            }
+
+            var userId = this.getAttribute('data-userId');
+            var fullname = this.getAttribute('data-fullname');
+            var email = this.getAttribute('data-email');
+            var gender = this.getAttribute('data-gender');
+            var address = this.getAttribute('data-address');
+            var phonenumber = this.getAttribute('data-phonenumber');
+            var roleName = this.getAttribute('data-roleName');
+
+            document.getElementById("userId").innerText = userId;
+            document.getElementById("fullname").innerText = fullname;
+            document.getElementById("gender").innerText = gender;
+            document.getElementById("email").innerText = email;
+            document.getElementById("phonenumber").innerText = phonenumber;
+            document.getElementById("address").innerText = address;
+            document.getElementById("roleName").innerText = roleName;
+          
+        });
+    });
+
+</script>

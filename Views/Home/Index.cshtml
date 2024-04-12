@@ -21,11 +21,16 @@
                         <div class="card-body px-4 align-items-">
                             <h6 class="card-title" style="min-height: 40px;">@manProducts[i].Name</h6>
                             <p class="card-text">@manProducts[i].UnitPrice VNĐ</p>
-                            <div class="action d-flex justify-content-between">
+                            <div class="action d-flex justify-content-end">
+                                <div>
+                                    <a asp-controller="Product" asp-action="LikeProduct" asp-route-productId="@manProducts[i].ProductId"><i class="bi bi-heart icon"></i></a>
+                                </div>
 
-                                <a asp-controller="Wishlist" asp-action="AddToWishlist" asp-route-productId="@manProducts[i].ProductId"><i class="bi bi-heart icon"></i></a>
+                                <div>
+                                    <a asp-controller="Wishlist" asp-action="AddToWishlist" asp-route-productId="@manProducts[i].ProductId"><i class="bi bi-heart icon"></i></a>
 
-                                <a asp-controller="ShoppingCart" asp-action="AddToShoppingCartFromProduct" asp-route-productId="@manProducts[i].ProductId"><i class="bi bi-cart3 icon"></i></a>
+                                    <a asp-controller="ShoppingCart" asp-action="AddToShoppingCartFromProduct" asp-route-productId="@manProducts[i].ProductId"><i class="bi bi-cart3 icon"></i></a>
+                                </div>
 
                             </div>
                         </div>
@@ -51,11 +56,15 @@
                         <div class="card-body px-4 align-items-">
                             <a class="card-title" style="min-height: 40px;" asp-controller="Product" asp-action="RedirectToProductsView">@womenProducts[i].Name</a>
                             <p class="card-text">@womenProducts[i].UnitPrice VNĐ</p>
-                            <div class="action d-flex justify-content-between">
+                            <div class="action d-flex justify-content-end">
+                                <div>
+                                    <a asp-controller="Product" asp-action="LikeProduct" asp-route-productId="@manProducts[i].ProductId"><i class="bi bi-heart icon"></i></a>
+                                </div>
+                                <div>
+                                    <a asp-controller="Wishlist" asp-action="AddToWishlist" asp-route-productId="@womenProducts[i].ProductId"><i class="bi bi-heart icon"></i></a>
 
-                                <a asp-controller="Wishlist" asp-action="AddToWishlist" asp-route-productId="@womenProducts[i].ProductId"><i class="bi bi-heart icon"></i></a>
-
-                                <a asp-controller="ShoppingCart" asp-action="AddToShoppingCartFromProduct" asp-route-productId="@womenProducts[i].ProductId"><i class="bi bi-cart3 icon"></i></a>
+                                    <a asp-controller="ShoppingCart" asp-action="AddToShoppingCartFromProduct" asp-route-productId="@womenProducts[i].ProductId"><i class="bi bi-cart3 icon"></i></a>
+                                </div>
 
                             </div>
                         </div>

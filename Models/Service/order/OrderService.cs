@@ -1,4 +1,5 @@
 ﻿using ClothingStore.Models.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace ClothingStore.Models.Service.order
 {
@@ -8,6 +9,11 @@ namespace ClothingStore.Models.Service.order
         public OrderService(ClothingStoreDbContext context) 
         { 
             _context = context;
+        }
+
+        public async Task<IEnumerable<Order>> GetOrdersByUserId(string userId)
+        {
+            return await _context.Orders.Where(i => i.UserId == userId).ToListAsync();
         }
         public async Task AddAsync(Order order)
         {
@@ -20,6 +26,7 @@ namespace ClothingStore.Models.Service.order
             throw new NotImplementedException();
         }
 
+        
         public Task UpdateAsync(int id, Order order)
         {
             throw new NotImplementedException();

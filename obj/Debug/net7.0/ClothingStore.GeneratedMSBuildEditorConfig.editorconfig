@@ -16,8 +16,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\dangt\OneDrive\Desktop\LT_Website\code\ClothingStore\ClothingStore
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/dangt/OneDrive/Desktop/LT_Website/code/ClothingStore/ClothingStore/Areas/Admin/Views/Component/_Header.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tcG9uZW50XF9IZWFkZXIuY3NodG1s
+[C:/Users/dangt/OneDrive/Desktop/LT_Website/code/ClothingStore/ClothingStore/Areas/Admin/Models/_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cTW9kZWxzXF9IZWFkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/dangt/OneDrive/Desktop/LT_Website/code/ClothingStore/ClothingStore/Areas/Admin/Views/Component/_Navigation.cshtml]
@@ -38,6 +38,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/dangt/OneDrive/Desktop/LT_Website/code/ClothingStore/ClothingStore/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dangt/OneDrive/Desktop/LT_Website/code/ClothingStore/ClothingStore/Areas/Admin/Views/Statistics/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3RhdGlzdGljc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/dangt/OneDrive/Desktop/LT_Website/code/ClothingStore/ClothingStore/Areas/Admin/Views/User/Index.cshtml]

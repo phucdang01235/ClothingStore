@@ -20,6 +20,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using ClothingStore.Models.Enum;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace ClothingStore.Areas.Identity.Pages.Account
 {
@@ -79,6 +81,23 @@ namespace ClothingStore.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
+            /// 
+            [Required]
+            public string FullName { get; set; }
+
+            [Required]
+            [Phone]
+            public string PhoneNumber { get; set; }
+
+            [Required]
+            public string Address { get; set; }
+
+            [Required]
+            public string Gender { get; set; }
+
+            [ValidateNever]
+            public IEnumerable<SelectListItem> GenderList { get; set; }
+
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]
@@ -110,8 +129,28 @@ namespace ClothingStore.Areas.Identity.Pages.Account
             _roleManager.CreateAsync(new IdentityRole(SD.Role_Admin)).GetAwaiter().GetResult();
             _roleManager.CreateAsync(new IdentityRole(SD.Role_User)).GetAwaiter().GetResult();
 
+            var items = new[]
+            {
+                    new SelectListItem { Value = "Nam", Text = "Nam" },
+                    new SelectListItem { Value = "Nữ", Text = "Nữ" }
+            };
+
+            Input = new InputModel()
+            {
+                GenderList = items.Select(i => i.Text).Select(i =>
+
+                    new SelectListItem
+                    {
+                        Value = i,
+                        Text = i
+                    }
+                )
+            };
+
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
+            
         }
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
@@ -121,7 +160,11 @@ namespace ClothingStore.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = CreateUser();
-
+                user.Email = Input.Email;
+                user.FullName = Input.FullName;
+                user.PhoneNumber = Input.PhoneNumber;
+                user.Address = Input.Address;
+                user.Gender = Input.Gender;
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
@@ -130,7 +173,7 @@ namespace ClothingStore.Areas.Identity.Pages.Account
                 {
                     _logger.LogInformation("User created a new account with password.");
 
-                    await _userManager.CreateAsync(user, SD.Role_User);
+                    await _userManager.AddToRoleAsync(user, SD.Role_User);
 
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);

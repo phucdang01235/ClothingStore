@@ -29,6 +29,10 @@ namespace ClothingStore.Models.Service.product
             return products;
         }
 
+        public async Task LikeProduct(int productId, string userId)
+        {
+
+        }
 
         public async Task<Product> GetByIdAsync(int id)
         {
