@@ -6,6 +6,9 @@ using ClothingStore.Models.Service.wishlist;
 using ClothingStore.Models.Service.order;
 using ClothingStore.Models.Service.orderdetail;
 using ClothingStore.Models.Service.vnpay;
+using ClothingStore.Models.Service.size;
+using ClothingStore.Models.Service.productsize;
+using ClothingStore.Models.Service.category;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,6 +35,10 @@ builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IWishlistService, WishlistService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IOrderDetailService, OrderDetailService>();
+builder.Services.AddScoped<ISizeService, SizeService>();
+builder.Services.AddScoped<IProductSizeService, ProductSizeService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+
 
 
 builder.Services.AddDistributedMemoryCache();

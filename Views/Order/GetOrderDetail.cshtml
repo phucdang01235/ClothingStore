@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<ClothingStore.Models.Entity.OrderDetail>
 
-<div class="container p-5 my-4">
+<div class="container p-5 my-4 border">
     <h5 style="font-size: 24px; text-align: center; margin-bottom: 40px;">CHI TIẾT ĐƠN HÀNG</h5>
     
     <table class="table">
@@ -23,7 +23,7 @@
                 </th>                
             </tr>
         </thead>
-        <tbody>
+        <tbody style="border-bottom: 2px black solid">
             @foreach (var item in Model)
             {
                 <tr>
@@ -42,11 +42,15 @@
                     <td>
                         @item.Amount
                     </td>
-                    
+                   
                 </tr>
             }
         </tbody>
     </table>
+    <div class="d-flex justify-content-end column-gap-5 px-5">
+        <h4 class="d-inline-block me-4">Tổng Số Lượng : @Model.Sum(i => i.NumberOfProduct)</h4>
+        <h4 class="d-inline-block">Tổng Giá : @Model.Sum(i => i.Amount) VNĐ</h4>
+    </div>
 </div>
 
 <style>

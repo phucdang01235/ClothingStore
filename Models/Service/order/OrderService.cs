@@ -34,5 +34,10 @@ namespace ClothingStore.Models.Service.order
         {
             throw new NotImplementedException();
         }
+
+        public async Task<IEnumerable<Order>> GetAllAsync()
+        {
+            return await _context.Orders.ToListAsync();
+        }
     }
 }

@@ -4,6 +4,7 @@ namespace ClothingStore.Models.Service.orderdetail
 {
     public interface IOrderDetailService
     {
+        Task<IEnumerable<OrderDetail>> GetAllAsync();
         Task<IEnumerable<OrderDetail>> GetOrderDetailsAsync(string userId, int orderId);
         Task AddAsync(OrderDetail orderDetail);
         Task DeleteAsync(int orderDetailId);

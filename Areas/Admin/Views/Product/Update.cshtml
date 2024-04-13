@@ -1,0 +1,75 @@
+﻿@model ClothingStore.Models.Entity.Product
+
+
+<div class="container">
+    <div class="border p-4">
+        <h2 class="text-uppercase text-center mb-5">Cập nhập sản phẩm</h2>
+        <form class="row justify-content-between" asp-action="UpdateProduct" enctype="multipart/form-data">
+            <div class="col-5">
+                <div class="form-group">
+                    <label class="control-label">Ảnh</label>
+                    <input type="file" name="image"/>
+                    <img src="@Model.ProductImages[0].ImageUrl" style="width: 100%; height: 450px; margin-top:12px;" />
+                </div>
+            </div>
+            <div class="col-5">
+                <input type="hidden" value="@Model.ProductId" name="productId"/>
+                
+                <div class="form-group">
+                    <label class="control-label">Tên Sản Phẩm</label>
+                    <input name="Name" class="form-control" value="@Model.Name" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Giới Tính</label>
+                    <select name="Gender" class="form-control" asp-items="ViewBag.Gender">
+                        <option disabled>--Chọn Loại Sản Phẩm--</option>
+                        @foreach (var item in ViewBag.Gender)
+                        {
+                            <!option value="@item.Value" @(item.Value == Model.Gender ? "selected" : "")>@item.Text</!option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Đơn Giá</label>
+                    <input name="UnitPrice" class="form-control" type="number" value="@Model.UnitPrice"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Màu Sắc</label>
+                    <input name="Color" class="form-control" value="@Model.Color" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Loại Sản Phẩm</label>
+                    <select name="CategoryId" class="form-control" asp-items="ViewBag.Categories">
+                        <option disabled>--Chọn Loại Sản Phẩm--</option>
+                        @foreach (var item in ViewBag.Categories)
+                        {
+                            <!option value="@item.Value" @(item.Value == Model.Category.Name ? "selected" : "")>@item.Text</!option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Size</label>
+                    <select name="SizeId" class="form-control" asp-items="ViewBag.Sizes">
+                        <option disabled selected>--Xem Size--</option>
+                        @foreach (var item in ViewBag.Categories)
+                        {
+                            <!option value="@item.Value" @(item.Value == Model.Category.Name ? "selected" : "")>@item.Text</!option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Số Lượng</label>
+                    <input name="Quantity" type="number" class="form-control" />
+                </div>
+                
+                <div class="form-group mt-4">
+                    <input type="submit" value="Tạo Sản Phẩm" class="btn btn-primary" />
+                </div>
+            
+            </div>
+        </form>
+    </div>
+
+</div>
+
+

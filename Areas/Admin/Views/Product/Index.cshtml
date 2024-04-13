@@ -1,0 +1,92 @@
+﻿@model IEnumerable<ClothingStore.Models.Entity.Product>
+<div class="container  p-5 my-4 border">
+    <h5 style="font-size: 24px; text-align: center; margin-bottom: 40px;">DANH SÁCH SẢN PHẨM</h5>
+    <a asp-area="Admin" asp-controller="Product" asp-action="Add"
+       class="btn btn-info mb-4">
+        Thêm Sản Phẩm
+    </a>
+    <table class="table">
+        <thead class="border-bottom-custom">
+            <tr>
+                <th>
+                    Ảnh sản phẩm
+                </th>
+                <th style="width: 180px;">
+                    Tên sản phẩm
+                </th>
+                <th>
+                    Loại Sản Phẩm
+                </th>
+                <th>
+                    Giới tính
+                </th>
+                <th>
+                    Giá
+                </th>
+                <th>
+                    Màu
+                </th>
+                <th>
+                    Chức năng
+                </th>
+            </tr>
+        </thead>
+        <tbody class="border-bottom-custom">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <img src="@item.ProductImages[0].ImageUrl">
+                    </td>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Category.Name
+                    </td>
+                    <td>
+                        @item.Gender
+                    </td>
+                    <td>
+                        @item.UnitPrice
+                    </td>
+                    <td>
+                        @item.Color
+                    </td>
+                    <td>
+                        <a asp-area="Admin" asp-controller="Product" asp-action="Detail" asp-route-productId="@item.ProductId"
+                            class="btn btn-primary">
+                            Chi Tiết
+                        </a>
+                        <a asp-area="Admin" asp-controller="Product" asp-action="Update" asp-route-productId="@item.ProductId"
+                           class="btn btn-warning">
+                            Cập Nhập
+                        </a>
+                        <a asp-area="Admin" asp-controller="Product" asp-action="Delete" asp-route-productId="@item.ProductId"
+                           class="btn btn-danger">
+                            Delete
+                        </a>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+<style>
+    .border-bottom-custom {
+        border-bottom: 2px black solid;
+    }
+
+    img {
+        width: 100px;
+    }
+
+
+    td, th {
+        text-align: center;
+        font-size: 20px;
+    }
+</style>

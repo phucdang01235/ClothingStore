@@ -1,0 +1,76 @@
+﻿@model ClothingStore.Models.Entity.Product
+
+
+<div class="container">
+    <div class="border p-4">
+        <h2 class="text-uppercase text-center mb-5">Thêm sản phẩm</h2>
+        <form class="row justify-content-between" asp-action="AddProduct" enctype="multipart/form-data">
+            <div class="col-5">
+                <div class="form-group">
+                    <label class="control-label">Ảnh</label>
+                    <input type="file" name="image" id="fileInput"/>
+                    <img id="imgUpload" style="width: 100%; height: 450px;" />
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="form-group">
+                    <label class="control-label">Tên Sản Phẩm</label>
+                    <input name="Name" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Giới Tính</label>
+                    <select name="Gender" class="form-control" asp-items="ViewBag.Gender">
+                        <option disabled selected>--Chọn Loại Sản Phẩm--</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Đơn Giá</label>
+                    <input name="UnitPrice" class="form-control" type="number" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Màu Sắc</label>
+                    <input name="Color" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Loại Sản Phẩm</label>
+                    <select name="CategoryId" class="form-control" asp-items="ViewBag.Categories">
+                        <option disabled selected>--Chọn Loại Sản Phẩm--</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Size</label>
+                    <select name="SizeId" class="form-control" asp-items="ViewBag.Sizes">
+                        <option disabled selected>--Xem Size--</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Số Lượng</label>
+                    <input name="Quantity" type="number" class="form-control" />
+                </div>
+
+                <div class="form-group mt-4">
+                    <input type="submit" value="Tạo Sản Phẩm" class="btn btn-primary" />
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<script>
+
+    document.getElementById('fileInput').addEventListener('change', function () {
+
+        var file = this.files[0];
+        console.log(file);
+        if (file) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById('imgUpload').src = e.target.result;
+            }
+            reader.readAsDataURL(file);
+        }
+    });
+
+</script>

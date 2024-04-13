@@ -19,6 +19,8 @@ public class User : IdentityUser
 
     public string? Gender { get; set; }
 
+    public bool IsDisable { get; set; } = false;
+
     public List<Order> Orders { get; set; }
 
     public List<Wishlist> Wishlists { get; set; }

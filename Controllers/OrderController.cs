@@ -138,7 +138,6 @@ namespace ClothingStore.Controllers
                     ProductId = orderDetailDTO[i].ProductId,
                     NumberOfProduct = orderDetailDTO[i].NumberOfProduct,
                     UnitPrice = orderDetailDTO[i].UnitPrice,
-                    Amount = orderDetailDTO[i].UnitPrice * orderDetailDTO[i].NumberOfProduct
                 };
                 await _orderDetailService.AddAsync(orderDetail);
             }

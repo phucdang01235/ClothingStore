@@ -12,7 +12,13 @@ public class OrderDetail
     
     public int ProductId { get; set; }
 
-    public double? Amount { get; set; }
+    public double? Amount
+    {
+        get
+        {
+            return NumberOfProduct * UnitPrice;
+        }
+    }
 
     public int? NumberOfProduct { get; set; }
 

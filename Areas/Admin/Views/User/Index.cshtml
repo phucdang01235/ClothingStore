@@ -36,13 +36,16 @@
                             <form class="d-inline-block" asp-area="Admin" asp-controller="User" asp-action="UpdateRole" method="post">
                                 <input value="@item.Id" name="userId" hidden/>
                                 <input value="@UserManager.GetRolesAsync(item).Result[0]" name="oldRole" hidden/>
-                                <select asp-items="ViewBag.Roles" name="roleName"></select>
+                                <select asp-items="ViewBag.Roles" name="roleName">
+                                    <option disabled selected>--Chọn Quyền--</option>
+                                </select>
                                 <button type="submit">Cập nhập quyền</button>
                             </form>
                         </td>
                         <td>
                             <button class="btn btn-primary"
                                     id="btnDetail"
+                                    data-isDisable="@item.IsDisable"
                                     data-userId="@item.Id"
                                     data-fullname="@item.FullName"
                                     data-email="@item.Email"
@@ -53,12 +56,20 @@
                                     type="button">
                                 Chi Tiết
                             </button>
-                            <a class="btn btn-primary" style="line-height: 35px;"
+                            <a class="btn btn-primary"
                                asp-area="Admin"
                                asp-controller="Order"
                                asp-action="GetOrdersByUserId"
                                asp-route-userId="@item.Id">
                                 Xem Đơn Hàng     
+                            </a>
+                            <a class="btn @(item.IsDisable ? "btn-success" : "btn-danger")"
+                               asp-area="Admin"
+                               asp-controller="User"
+                               asp-action="DisableUser"
+                               asp-route-userId="@item.Id"
+                               asp-route-isDisable="@item.IsDisable">
+                                @(item.IsDisable ? "Kích Hoạt" : "Vô Hiệu Hóa")
                             </a>
 
                         </td>
@@ -98,6 +109,9 @@
                     </li>
                     <li>
                         <p class="header-detail">Quyền : </p><span id="roleName"></span>
+                    </li>
+                    <li>
+                        <p class="header-detail">Trạng thái : </p><span id="isDisable"></span>
                     </li>
                 </ul>
             </div>
@@ -163,6 +177,7 @@
                 informationElement.removeAttribute("hidden");
             }
 
+            var isDisable = this.getAttribute('data-isDisable');
             var userId = this.getAttribute('data-userId');
             var fullname = this.getAttribute('data-fullname');
             var email = this.getAttribute('data-email');
@@ -170,7 +185,8 @@
             var address = this.getAttribute('data-address');
             var phonenumber = this.getAttribute('data-phonenumber');
             var roleName = this.getAttribute('data-roleName');
-
+            
+            document.getElementById("isDisable").innerText = (isDisable == true) ? "Vô Hiệu Hóa" : "Kích Hoạt" ;
             document.getElementById("userId").innerText = userId;
             document.getElementById("fullname").innerText = fullname;
             document.getElementById("gender").innerText = gender;

@@ -1,0 +1,52 @@
+﻿@model ClothingStore.Models.Entity.Product
+
+<div class="container">
+    <div class="row border">
+        <div class="col-4">
+            @if(Model.ProductImages?[0].ImageUrl != null){
+                <img src="@Model.ProductImages[0].ImageUrl" class="w-100" />
+            }
+            else
+            {
+                <p>sd</p>
+            }
+        </div>
+        <div class="col-7">
+            <h3 class="border-bottom-custom" style="line-height: 50px;">@Model.Name</h3>
+            <h5>@Model.UnitPrice VNĐ</h5>
+            <p>Giới tính: @Model.Gender</p>
+            <p>Màu: @Model.Color</p>
+            <div class="d-flex">
+                <strong class="col-2">Size : </strong>
+                <select class="col-5" asp-items="@ViewBag.Sizes" name="size" id="sizeSelect">
+                    <option disabled selected>--Xem Size--</option>
+                </select>
+                <input hidden/>
+                <p class="col-2 ms-5" id="quantity">SL : <span id="numberOfSize">0</span></p>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .border-bottom-custom {
+        border-bottom: 2px black solid;
+    }
+</style>
+
+<script>
+    document.addEventListener("click", function () {
+        var quantityElement = document.getElementById("quantity");
+        if (quantityElement.hasAttribute("hidden")) {
+            quantityElement.removeAttribute("hidden");
+        }
+
+        var selectValue = document.getElementById("sizeSelect");
+        
+        var numberOfSizeElement = document.getElementById("numberOfSize");
+        numberOfSizeElement.innerText = selectValue.value;
+    });
+</script>

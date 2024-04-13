@@ -35,9 +35,23 @@ namespace ClothingStore.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateRole(string userId, string roleName, string oldRole)
         {
+            if(roleName == null)
+                return RedirectToAction("Index", "User");
+
             var user = await _userManager.Users.FirstOrDefaultAsync(i => i.Id == userId);
             await _userManager.RemoveFromRoleAsync(user, oldRole);
             await _userManager.AddToRoleAsync(user, roleName);
+            return RedirectToAction("Index", "User");
+        }
+
+        public async Task<IActionResult> DisableUSer(string userId, bool isDisable)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            // Vô hiệu / Kích hoạt người dùng
+            user.IsDisable = !isDisable;
+            // Update user vào database
+            var result = await _userManager.UpdateAsync(user);
+
             return RedirectToAction("Index", "User");
         }
     }

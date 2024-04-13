@@ -21,6 +21,11 @@ namespace ClothingStore.Models.Service.orderdetail
             throw new NotImplementedException();
         }
 
+        public async Task<IEnumerable<OrderDetail>> GetAllAsync()
+        {
+            return await _context.OrderDetails.Include( i => i.Order).ToListAsync();
+        }
+
         public async Task<IEnumerable<OrderDetail>> GetOrderDetailsAsync(string userId, int orderId)
         {
             var orderDetails = await _context.OrderDetails

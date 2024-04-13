@@ -10,8 +10,8 @@ namespace ClothingStore.Models.Service.product
         Task<IEnumerable<Product>> Search(string keyword);
         Task LikeProduct(Like like);
         bool IsLikeProduct(int productId, string userId);
-        Task AddAsync(Product product);
+        Task AddAsync(int sizeId, int quantity, Product product, string imgUrl);
         Task DeleteAsync(int id);
-        Task UpdateAsync(int id, Product product);
+        Task UpdateAsync(int productId,ProductSize productSize, Product product, string imageUrl);
     }
 }

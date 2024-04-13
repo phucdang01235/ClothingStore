@@ -1,33 +1,94 @@
-﻿<div class="container">
+﻿@using ClothingStore.Models.Entity
+
+@{
+    var productStatistics = TempData["ProductStatistics"];
+    var orderStatistics = TempData["OrderStatistics"];
+
+    User topUser = (User)TempData["TopUser"];
+
+    var totalRevenue = TempData["TotalRevenue"];
+    Product topProductRevenue = (Product)TempData["TopProductRevenue"];
+
+    List<Product> topProduct = (List<Product>)TempData["TopProduct"];
+
+}
+
+<div class="container">
     <div class="row column-gap-3 justify-content-between mb-5">
         <div class="col-2 statistics" style="background-color: rgb(136,146,214);">
-            <p class="statistics-title">sd</p>
-            <h2 class="statistics-data">3223487 </h2>
+            <p class="statistics-title">Top người dùng mua hàng</p>
+            <div>
+                <ul class="d-flex flex-column">
+                    <li>
+                        Tên : @topUser.FullName
+                    </li>
+                    <li>
+                        Email : @topUser.Email
+                    </li>
+                    <li>
+                        SĐT : @topUser.PhoneNumber
+                    </li>
+                    <li>
+                        Tổng Đơn Hàng : 
+                        <strong>@topUser.Orders.Where(i => i.OrderDate.Value.Month == DateTime.Now.Month && i.OrderDate.Value.Year == DateTime.Now.Year).Count()</strong>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="col-3 statistics" style="background-color: rgb(69,187,224);">
-            <p class="statistics-title">Sản phẩm</p>
-            <h2 class="statistics-data">3223487 </h2>
+            <p class="statistics-title">Thống kê sản phẩm </p>
+            <h2 class="statistics-data">@productStatistics SẢN PHẨM</h2>
             <p>Tổng sản phẩm bán được trong tháng</p>
         </div>
         <div class="col-3 statistics" style="background-color: rgb(240,98,146);">
-            <p class="statistics-title">Số lượng đơn hàng bán được </p>
-            <h2 class="statistics-data">3223487 </h2>
+            <p class="statistics-title">Thống kê đơn hàng </p>
+            <h2 class="statistics-data">@orderStatistics ĐƠN HÀNG</h2>
+            <p>Tổng đơn hàng được đặt trong tháng</p>
         </div>
         <div class="col-2 statistics" style="background-color: rgb(120,195,80);">
-            <p class="statistics-title">sd</p>
-            <h2 class="statistics-data">3223487 </h2>
+            <p class="statistics-title">Top doanh thu sản phẩm</p>
+            <div>
+                <ul class="d-flex flex-column">
+                    <li>
+                        Mã SP : @topProductRevenue.ProductId
+                    </li>
+                    <li>
+                        Tên Sản phẩm: @topProductRevenue.Name
+                    </li>
+                    <li>
+                        Giới tính : @topProductRevenue.Gender
+                    </li>
+                    <li>
+                        Đơn Giá : @topProductRevenue.UnitPrice
+                    </li>
+                    <li>
+                        Tổng DT :
+                        <strong>@totalRevenue VNĐ</strong>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
     <div class="row justify-content-between">
         <div class="col-3 bg-white statistics">
-            Loại sản phẩm bán chạy nhất
+            <p class="text-center">Loại sản phẩm bán chạy nhất</p>
         </div>
-        <div class="col-3 bg-white statistics">
-            Top sản phẩm bán chạy nhất
+        <div class="col-4 bg-white statistics">
+            <p class="text-center">Top sản phẩm bán chạy nhất</p>
+            <div>
+                @for(int i = 0; i < 3; i++ )
+                {
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="@topProduct.ElementAt(i).ProductImages?[0].ImageUrl" />
+                        </div>
+                    </div>
+                }
+            </div>
         </div>
-        <div class="col-3 bg-white statistics">
-            Top sản phẩm được yêu thích nhất
+        <div class="col-4 bg-white statistics">
+            <p class="text-center">Top sản phẩm được yêu thích nhất</p>
         </div>
     </div>
 </div>
@@ -41,5 +102,6 @@
     .statistics-title {
         text-transform: uppercase;
         font-size: 16px;
+        font-weight: 600;
     }
 </style>
