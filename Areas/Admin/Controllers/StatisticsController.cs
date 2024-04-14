@@ -1,4 +1,8 @@
-﻿using ClothingStore.Models.Entity;
+﻿using ClothingStore.Models;
+using ClothingStore.Models.Entity;
+using ClothingStore.Models.Helper;
+using ClothingStore.Models.Response;
+using ClothingStore.Models.Service.like;
 using ClothingStore.Models.Service.order;
 using ClothingStore.Models.Service.orderdetail;
 using ClothingStore.Models.Service.product;
@@ -17,11 +21,13 @@ namespace ClothingStore.Areas.Admin.Controllers
         private readonly IOrderService _orderService;
         private readonly IOrderDetailService _orderDetailService;
         private readonly IProductService _productService;
+        private readonly ILikeService _likeService;
 
         private readonly UserManager<User> _userManager;
-        public StatisticsController(IProductService productService, UserManager<User> userManager, IOrderService orderService, IOrderDetailService orderDetailService)
+        public StatisticsController(ILikeService likeService, IProductService productService, UserManager<User> userManager, IOrderService orderService, IOrderDetailService orderDetailService)
         {
             _orderService = orderService;
+            _likeService = likeService;
             _productService = productService;
             _userManager = userManager;
             _orderDetailService = orderDetailService;
@@ -73,10 +79,43 @@ namespace ClothingStore.Areas.Admin.Controllers
                     TotalSold = g.Sum( i => i.NumberOfProduct)
                 });
 
-            var productTop = productsGroupBy.OrderByDescending( i => i.TotalSold);
-            TempData["TopProduct"] = productTop;
+            var productTop = productsGroupBy.OrderByDescending( i => i.TotalSold).ToList();
+            HttpContext.Session.SetObjectAsJson("TopProduct", productTop.Select(i => new ProductResponse
+            {
+                ProductId = i.ProductId,
+                Total = (int)i.TotalSold
+            }).ToList());
 
-            
+            // Top sản phẩm được yêu thích 
+            var likes = await _likeService.GetAllAsync();
+            var likesGroupBy = likes
+                .GroupBy(o => o.ProductId)
+                .OrderByDescending(i => i.Count())
+                .Select(i => new
+                {
+                    ProductId = i.Key,
+                    TotalLike = i.Count()
+                });
+            HttpContext.Session.SetObjectAsJson("TopLike", likesGroupBy.Select(i => new LikeResponse
+            {
+                ProductId = i.ProductId,
+                Total = i.TotalLike
+            }).ToList());
+
+            // Loại sản phẩm bán chạy nhất
+            var categorySold = orderDetails
+                .GroupBy(o => o.Product.CategoryId)
+                .OrderByDescending(g => g.Count())
+                .Select(i => new
+                {
+                    CategoryId = i.Key,
+                    Total = i.Count()
+                }).ToList();
+            HttpContext.Session.SetObjectAsJson("TopCategory", categorySold.Select(i => new CategoryResponse
+            {
+                CategoryId = i.CategoryId,
+                Total = i.Total
+            }).ToList());
 
             return View();
         }

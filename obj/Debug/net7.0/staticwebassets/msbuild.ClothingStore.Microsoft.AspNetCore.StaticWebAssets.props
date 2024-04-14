@@ -416,12 +416,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\ao_thun\BoCongThuong.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jean_nam_garment_dye_tron_form_straight.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jean\quan_jean_nam_garment_dye_tron_form_straight.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nam/quan_nam/quan_jean_nam_garment_dye_tron_form_straight.jpg</RelativePath>
+      <RelativePath>images/nam/quan_jean/quan_jean_nam_garment_dye_tron_form_straight.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -430,14 +430,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jean_nam_garment_dye_tron_form_straight.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jean\quan_jean_nam_garment_dye_tron_form_straight.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jean_nam_ong_om_tron_form_slim_-.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jean\quan_jean_nam_ong_om_tron_form_slim_-.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nam/quan_nam/quan_jean_nam_ong_om_tron_form_slim_-.jpg</RelativePath>
+      <RelativePath>images/nam/quan_jean/quan_jean_nam_ong_om_tron_form_slim_-.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -446,14 +446,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jean_nam_ong_om_tron_form_slim_-.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jean\quan_jean_nam_ong_om_tron_form_slim_-.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jean_nam_ong_rong_tron_form_straight_cro.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jean\quan_jean_nam_ong_rong_tron_form_straight_cro.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nam/quan_nam/quan_jean_nam_ong_rong_tron_form_straight_cro.jpg</RelativePath>
+      <RelativePath>images/nam/quan_jean/quan_jean_nam_ong_rong_tron_form_straight_cro.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -462,14 +462,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jean_nam_ong_rong_tron_form_straight_cro.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jean\quan_jean_nam_ong_rong_tron_form_straight_cro.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jean_nam_rach_goi_tron_form_skinny_-.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jean\quan_jean_nam_rach_goi_tron_form_skinny_-.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nam/quan_nam/quan_jean_nam_rach_goi_tron_form_skinny_-.jpg</RelativePath>
+      <RelativePath>images/nam/quan_jean/quan_jean_nam_rach_goi_tron_form_skinny_-.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -478,14 +478,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jean_nam_rach_goi_tron_form_skinny_-.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jean\quan_jean_nam_rach_goi_tron_form_skinny_-.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jean_nam_rach_goi_tron_form_slim_cro.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jean\quan_jean_nam_rach_goi_tron_form_slim_cro.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nam/quan_nam/quan_jean_nam_rach_goi_tron_form_slim_cro.jpg</RelativePath>
+      <RelativePath>images/nam/quan_jean/quan_jean_nam_rach_goi_tron_form_slim_cro.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -494,14 +494,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jean_nam_rach_goi_tron_form_slim_cro.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jean\quan_jean_nam_rach_goi_tron_form_slim_cro.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jean_nam_tron_form_skinny_-.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jean\quan_jean_nam_tron_form_skinny_-.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nam/quan_nam/quan_jean_nam_tron_form_skinny_-.jpg</RelativePath>
+      <RelativePath>images/nam/quan_jean/quan_jean_nam_tron_form_skinny_-.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -510,14 +510,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jean_nam_tron_form_skinny_-.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jean\quan_jean_nam_tron_form_skinny_-.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jean_nam_tron_form_sli.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jean\quan_jean_nam_tron_form_sli.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nam/quan_nam/quan_jean_nam_tron_form_sli.jpg</RelativePath>
+      <RelativePath>images/nam/quan_jean/quan_jean_nam_tron_form_sli.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -526,14 +526,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jean_nam_tron_form_sli.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jean\quan_jean_nam_tron_form_sli.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jean_nam_tron_form_slim_crop_-.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jean\quan_jean_nam_tron_form_slim_crop_-.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nam/quan_nam/quan_jean_nam_tron_form_slim_crop_-.jpg</RelativePath>
+      <RelativePath>images/nam/quan_jean/quan_jean_nam_tron_form_slim_crop_-.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -542,14 +542,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jean_nam_tron_form_slim_crop_-.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jean\quan_jean_nam_tron_form_slim_crop_-.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jean_nam_tron_form_wide_le.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jean\quan_jean_nam_tron_form_wide_le.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nam/quan_nam/quan_jean_nam_tron_form_wide_le.jpg</RelativePath>
+      <RelativePath>images/nam/quan_jean/quan_jean_nam_tron_form_wide_le.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -558,14 +558,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jean_nam_tron_form_wide_le.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jean\quan_jean_nam_tron_form_wide_le.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jean_nam_tron_ong_om_form_slim_cro.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jean\quan_jean_nam_tron_ong_om_form_slim_cro.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nam/quan_nam/quan_jean_nam_tron_ong_om_form_slim_cro.jpg</RelativePath>
+      <RelativePath>images/nam/quan_jean/quan_jean_nam_tron_ong_om_form_slim_cro.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -574,14 +574,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jean_nam_tron_ong_om_form_slim_cro.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jean\quan_jean_nam_tron_ong_om_form_slim_cro.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jogger_nam_tron_phoi_day_rut_trong.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jogger\quan_jogger_nam_tron_phoi_day_rut_trong.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nam/quan_nam/quan_jogger_nam_tron_phoi_day_rut_trong.jpg</RelativePath>
+      <RelativePath>images/nam/quan_jogger/quan_jogger_nam_tron_phoi_day_rut_trong.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -590,14 +590,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_jogger_nam_tron_phoi_day_rut_trong.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_jogger\quan_jogger_nam_tron_phoi_day_rut_trong.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_sweatpants_unisex_ni_cot_day_ong_rong (2).jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_tay\quan_tay_da.jpgi._slim_.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nam/quan_nam/quan_sweatpants_unisex_ni_cot_day_ong_rong (2).jpg</RelativePath>
+      <RelativePath>images/nam/quan_tay/quan_tay_da.jpgi._slim_.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -606,14 +606,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_sweatpants_unisex_ni_cot_day_ong_rong (2).jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_tay\quan_tay_da.jpgi._slim_.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_sweatpants_unisex_ni_cot_day_ong_rong.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_tay\quan_tay_nam_ong_om_vai_gan_phoi_chi_tron.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nam/quan_nam/quan_sweatpants_unisex_ni_cot_day_ong_rong.jpg</RelativePath>
+      <RelativePath>images/nam/quan_tay/quan_tay_nam_ong_om_vai_gan_phoi_chi_tron.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -622,14 +622,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_sweatpants_unisex_ni_cot_day_ong_rong.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_tay\quan_tay_nam_ong_om_vai_gan_phoi_chi_tron.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_tay_da.jpgi._slim_.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_tay\quan_tay_nam_ong_rong_premium_melange_limited_form_loose.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nam/quan_nam/quan_tay_da.jpgi._slim_.jpg</RelativePath>
+      <RelativePath>images/nam/quan_tay/quan_tay_nam_ong_rong_premium_melange_limited_form_loose.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -638,14 +638,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_tay_da.jpgi._slim_.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_tay\quan_tay_nam_ong_rong_premium_melange_limited_form_loose.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_tay_nam_ong_om_vai_gan_phoi_chi_tron.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_hoodie_sweater\ao_sweater_nu_rong_tay_dai_co_tron_in_hinh.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nam/quan_nam/quan_tay_nam_ong_om_vai_gan_phoi_chi_tron.jpg</RelativePath>
+      <RelativePath>images/nu/ao_hoodie_sweater/ao_sweater_nu_rong_tay_dai_co_tron_in_hinh.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -654,14 +654,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_tay_nam_ong_om_vai_gan_phoi_chi_tron.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_hoodie_sweater\ao_sweater_nu_rong_tay_dai_co_tron_in_hinh.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_tay_nam_ong_rong_premium_melange_limited_form_loose.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_len\ao_len_nu_det_kim_tay_dai_cotton_co_v_form.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nam/quan_nam/quan_tay_nam_ong_rong_premium_melange_limited_form_loose.jpg</RelativePath>
+      <RelativePath>images/nu/ao_len/ao_len_nu_det_kim_tay_dai_cotton_co_v_form.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -670,14 +670,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nam\quan_nam\quan_tay_nam_ong_rong_premium_melange_limited_form_loose.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_len\ao_len_nu_det_kim_tay_dai_cotton_co_v_form.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_blazer_nu_lung_tay_ngan_vai_tweed.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_len\ao_len_nu_lung_det_kim_co_cao_soc_gan_form.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/ao_nu/ao_blazer_nu_lung_tay_ngan_vai_tweed.jpg</RelativePath>
+      <RelativePath>images/nu/ao_len/ao_len_nu_lung_det_kim_co_cao_soc_gan_form.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -686,14 +686,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_blazer_nu_lung_tay_ngan_vai_tweed.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_len\ao_len_nu_lung_det_kim_co_cao_soc_gan_form.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_blazer_nu_tay_dai_vai_soc_tron_form.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_polo\ao_polo_nu_lung_tay_dai_cotton_tron_form.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/ao_nu/ao_blazer_nu_tay_dai_vai_soc_tron_form.jpg</RelativePath>
+      <RelativePath>images/nu/ao_polo/ao_polo_nu_lung_tay_dai_cotton_tron_form.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -702,14 +702,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_blazer_nu_tay_dai_vai_soc_tron_form.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_polo\ao_polo_nu_lung_tay_dai_cotton_tron_form.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_gilet_nu_vai_tweed_gai_nut_form.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_polo\ao_polo_nu_lung_tay_ngan_cotton_tron_form.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/ao_nu/ao_gilet_nu_vai_tweed_gai_nut_form.jpg</RelativePath>
+      <RelativePath>images/nu/ao_polo/ao_polo_nu_lung_tay_ngan_cotton_tron_form.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -718,14 +718,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_gilet_nu_vai_tweed_gai_nut_form.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_polo\ao_polo_nu_lung_tay_ngan_cotton_tron_form.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_kieu_nu_tay_ngan_xep_ly_knit_form.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_so_mi\ao_kieu_nu_tay_ngan_xep_ly_knit_form.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/ao_nu/ao_kieu_nu_tay_ngan_xep_ly_knit_form.jpg</RelativePath>
+      <RelativePath>images/nu/ao_so_mi/ao_kieu_nu_tay_ngan_xep_ly_knit_form.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -734,14 +734,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_kieu_nu_tay_ngan_xep_ly_knit_form.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_so_mi\ao_kieu_nu_tay_ngan_xep_ly_knit_form.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_len_nu_det_kim_tay_dai_cotton_co_v_form.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_so_mi\ao_so_mi_nu_sat_nach_tron_day_rut_vai_form.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/ao_nu/ao_len_nu_det_kim_tay_dai_cotton_co_v_form.jpg</RelativePath>
+      <RelativePath>images/nu/ao_so_mi/ao_so_mi_nu_sat_nach_tron_day_rut_vai_form.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -750,14 +750,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_len_nu_det_kim_tay_dai_cotton_co_v_form.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_so_mi\ao_so_mi_nu_sat_nach_tron_day_rut_vai_form.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_len_nu_lung_det_kim_co_cao_soc_gan_form.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_so_mi\ao_so_mi_nu_tay_dai_100%_cotton_ke_soc_form.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/ao_nu/ao_len_nu_lung_det_kim_co_cao_soc_gan_form.jpg</RelativePath>
+      <RelativePath>images/nu/ao_so_mi/ao_so_mi_nu_tay_dai_100%_cotton_ke_soc_form.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -766,14 +766,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_len_nu_lung_det_kim_co_cao_soc_gan_form.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_so_mi\ao_so_mi_nu_tay_dai_100%_cotton_ke_soc_form.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_polo_nu_lung_tay_dai_cotton_tron_form.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_so_mi\ao_so_mi_nu_tay_dai_polyester_tron_form_relax.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/ao_nu/ao_polo_nu_lung_tay_dai_cotton_tron_form.jpg</RelativePath>
+      <RelativePath>images/nu/ao_so_mi/ao_so_mi_nu_tay_dai_polyester_tron_form_relax.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -782,14 +782,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_polo_nu_lung_tay_dai_cotton_tron_form.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_so_mi\ao_so_mi_nu_tay_dai_polyester_tron_form_relax.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_polo_nu_lung_tay_ngan_cotton_tron_form.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_so_mi\ao_so_mi_nu_tay_dai_tron_co_be_xe_sau_form.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/ao_nu/ao_polo_nu_lung_tay_ngan_cotton_tron_form.jpg</RelativePath>
+      <RelativePath>images/nu/ao_so_mi/ao_so_mi_nu_tay_dai_tron_co_be_xe_sau_form.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -798,14 +798,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_polo_nu_lung_tay_ngan_cotton_tron_form.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_so_mi\ao_so_mi_nu_tay_dai_tron_co_be_xe_sau_form.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_so_mi_nu_sat_nach_tron_day_rut_vai_form.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_so_mi\ao_so_mi_nu_tay_dai_vai_coffee_tui_đap_tron.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/ao_nu/ao_so_mi_nu_sat_nach_tron_day_rut_vai_form.jpg</RelativePath>
+      <RelativePath>images/nu/ao_so_mi/ao_so_mi_nu_tay_dai_vai_coffee_tui_đap_tron.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -814,14 +814,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_so_mi_nu_sat_nach_tron_day_rut_vai_form.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_so_mi\ao_so_mi_nu_tay_dai_vai_coffee_tui_đap_tron.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_so_mi_nu_tay_dai_100%_cotton_ke_soc_form.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_tanktop\ao_tanktop_2_day_nu_co_tim_soc_gan_tron.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/ao_nu/ao_so_mi_nu_tay_dai_100%_cotton_ke_soc_form.jpg</RelativePath>
+      <RelativePath>images/nu/ao_tanktop/ao_tanktop_2_day_nu_co_tim_soc_gan_tron.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -830,14 +830,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_so_mi_nu_tay_dai_100%_cotton_ke_soc_form.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_tanktop\ao_tanktop_2_day_nu_co_tim_soc_gan_tron.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_so_mi_nu_tay_dai_polyester_tron_form_relax.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_thun\ao_thun_nu_lung_sat_nach_co_mockneck_form_slim_ped.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/ao_nu/ao_so_mi_nu_tay_dai_polyester_tron_form_relax.jpg</RelativePath>
+      <RelativePath>images/nu/ao_thun/ao_thun_nu_lung_sat_nach_co_mockneck_form_slim_ped.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -846,14 +846,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_so_mi_nu_tay_dai_polyester_tron_form_relax.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_thun\ao_thun_nu_lung_sat_nach_co_mockneck_form_slim_ped.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_so_mi_nu_tay_dai_tron_co_be_xe_sau_form.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_vest_blazer\ao_blazer_nu_lung_tay_ngan_vai_tweed.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/ao_nu/ao_so_mi_nu_tay_dai_tron_co_be_xe_sau_form.jpg</RelativePath>
+      <RelativePath>images/nu/ao_vest_blazer/ao_blazer_nu_lung_tay_ngan_vai_tweed.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -862,14 +862,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_so_mi_nu_tay_dai_tron_co_be_xe_sau_form.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_vest_blazer\ao_blazer_nu_lung_tay_ngan_vai_tweed.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_so_mi_nu_tay_dai_vai_coffee_tui_đap_tron.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_vest_blazer\ao_blazer_nu_tay_dai_vai_soc_tron_form.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/ao_nu/ao_so_mi_nu_tay_dai_vai_coffee_tui_đap_tron.jpg</RelativePath>
+      <RelativePath>images/nu/ao_vest_blazer/ao_blazer_nu_tay_dai_vai_soc_tron_form.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -878,14 +878,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_so_mi_nu_tay_dai_vai_coffee_tui_đap_tron.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_vest_blazer\ao_blazer_nu_tay_dai_vai_soc_tron_form.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_sweater_nu_rong_tay_dai_co_tron_in_hinh.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_vest_blazer\ao_gilet_nu_vai_tweed_gai_nut_form.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/ao_nu/ao_sweater_nu_rong_tay_dai_co_tron_in_hinh.jpg</RelativePath>
+      <RelativePath>images/nu/ao_vest_blazer/ao_gilet_nu_vai_tweed_gai_nut_form.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -894,39 +894,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_sweater_nu_rong_tay_dai_co_tron_in_hinh.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_tanktop_2_day_nu_co_tim_soc_gan_tron.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>ClothingStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/ao_nu/ao_tanktop_2_day_nu_co_tim_soc_gan_tron.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_tanktop_2_day_nu_co_tim_soc_gan_tron.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_thun_nu_lung_sat_nach_co_mockneck_form_slim_ped.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>ClothingStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/ao_nu/ao_thun_nu_lung_sat_nach_co_mockneck_form_slim_ped.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_nu\ao_thun_nu_lung_sat_nach_co_mockneck_form_slim_ped.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\ao_vest_blazer\ao_gilet_nu_vai_tweed_gai_nut_form.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_jogger\tst1.jpg))">
       <SourceType>Package</SourceType>
@@ -943,38 +911,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_jogger\tst1.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_nu\quan_dai_nu_ong_rong_xep_ly_lung_thun_tron.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>ClothingStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/quan_nu/quan_dai_nu_ong_rong_xep_ly_lung_thun_tron.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_nu\quan_dai_nu_ong_rong_xep_ly_lung_thun_tron.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_nu\quan_dai_vai_nu_ong_rong_lung_thun_day_rut.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>ClothingStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/quan_nu/quan_dai_vai_nu_ong_rong_lung_thun_day_rut.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_nu\quan_dai_vai_nu_ong_rong_lung_thun_day_rut.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_nu\quan_jean_nu_ong_om_tron_form_slim.jpg))">
       <SourceType>Package</SourceType>
@@ -1104,12 +1040,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_nu\quan_legging_nu_the_thao_lung_co_gian_form.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_nu\quan_short_jean_nu_ong_suong_tron_form.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_short\quan_short_jean_nu_ong_suong_tron_form.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/quan_nu/quan_short_jean_nu_ong_suong_tron_form.jpg</RelativePath>
+      <RelativePath>images/nu/quan_short/quan_short_jean_nu_ong_suong_tron_form.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -1118,14 +1054,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_nu\quan_short_jean_nu_ong_suong_tron_form.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_short\quan_short_jean_nu_ong_suong_tron_form.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_nu\quan_short_ni_nu_ong_rong_tui_op_cot_day_tron.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_short\quan_short_ni_nu_ong_rong_tui_op_cot_day_tron.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/quan_nu/quan_short_ni_nu_ong_rong_tui_op_cot_day_tron.jpg</RelativePath>
+      <RelativePath>images/nu/quan_short/quan_short_ni_nu_ong_rong_tui_op_cot_day_tron.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -1134,14 +1070,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_nu\quan_short_ni_nu_ong_rong_tui_op_cot_day_tron.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_short\quan_short_ni_nu_ong_rong_tui_op_cot_day_tron.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_nu\quan_short_nu_ong_rong_vai_tweed_tron_form.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_short\quan_short_nu_ong_rong_vai_tweed_tron_form.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/quan_nu/quan_short_nu_ong_rong_vai_tweed_tron_form.jpg</RelativePath>
+      <RelativePath>images/nu/quan_short/quan_short_nu_ong_rong_vai_tweed_tron_form.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -1150,14 +1086,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_nu\quan_short_nu_ong_rong_vai_tweed_tron_form.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_short\quan_short_nu_ong_rong_vai_tweed_tron_form.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_nu\quan_short_the_thao_nu_ong_rong_tron_form.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_short\quan_short_the_thao_nu_ong_rong_tron_form.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/quan_nu/quan_short_the_thao_nu_ong_rong_tron_form.jpg</RelativePath>
+      <RelativePath>images/nu/quan_short/quan_short_the_thao_nu_ong_rong_tron_form.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -1166,14 +1102,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_nu\quan_short_the_thao_nu_ong_rong_tron_form.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_short\quan_short_the_thao_nu_ong_rong_tron_form.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_nu\quan_vai_nu_ong_rong_ke_caro_xep_ly_nhun_truoc.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_vai\quan_dai_nu_ong_rong_xep_ly_lung_thun_tron.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/quan_nu/quan_vai_nu_ong_rong_ke_caro_xep_ly_nhun_truoc.jpg</RelativePath>
+      <RelativePath>images/nu/quan_vai/quan_dai_nu_ong_rong_xep_ly_lung_thun_tron.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -1182,14 +1118,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_nu\quan_vai_nu_ong_rong_ke_caro_xep_ly_nhun_truoc.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_vai\quan_dai_nu_ong_rong_xep_ly_lung_thun_tron.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_nu\quan_vai_nu_viscose_dieu_ly_tron_form_slim_crop_-_10f23pfow015.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_vai\quan_dai_vai_nu_ong_rong_lung_thun_day_rut.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/nu/quan_nu/quan_vai_nu_viscose_dieu_ly_tron_form_slim_crop_-_10f23pfow015.jpg</RelativePath>
+      <RelativePath>images/nu/quan_vai/quan_dai_vai_nu_ong_rong_lung_thun_day_rut.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -1198,14 +1134,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_nu\quan_vai_nu_viscose_dieu_ly_tron_form_slim_crop_-_10f23pfow015.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_vai\quan_dai_vai_nu_ong_rong_lung_thun_day_rut.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo_tui\balo_canvas_tui_hop_nhan_trang_tri.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_vai\quan_vai_nu_ong_rong_ke_caro_xep_ly_nhun_truoc.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/phu_kien/balo_tui/balo_canvas_tui_hop_nhan_trang_tri.jpg</RelativePath>
+      <RelativePath>images/nu/quan_vai/quan_vai_nu_ong_rong_ke_caro_xep_ly_nhun_truoc.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -1214,14 +1150,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo_tui\balo_canvas_tui_hop_nhan_trang_tri.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_vai\quan_vai_nu_ong_rong_ke_caro_xep_ly_nhun_truoc.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo_tui\balo_da_pu_tron_thoi_trang_thiet_ke_basic_phoi.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_vai\quan_vai_nu_viscose_dieu_ly_tron_form_slim_crop_-_10f23pfow015.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/phu_kien/balo_tui/balo_da_pu_tron_thoi_trang_thiet_ke_basic_phoi.jpg</RelativePath>
+      <RelativePath>images/nu/quan_vai/quan_vai_nu_viscose_dieu_ly_tron_form_slim_crop_-_10f23pfow015.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -1230,14 +1166,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo_tui\balo_da_pu_tron_thoi_trang_thiet_ke_basic_phoi.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\nu\quan_vai\quan_vai_nu_viscose_dieu_ly_tron_form_slim_crop_-_10f23pfow015.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo_tui\bop_da_mini_đeo_cheo_tron_freesize.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo\balo_canvas_tui_hop_nhan_trang_tri.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/phu_kien/balo_tui/bop_da_mini_đeo_cheo_tron_freesize.jpg</RelativePath>
+      <RelativePath>images/phu_kien/balo/balo_canvas_tui_hop_nhan_trang_tri.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -1246,14 +1182,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo_tui\bop_da_mini_đeo_cheo_tron_freesize.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo\balo_canvas_tui_hop_nhan_trang_tri.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo_tui\chuyen_đen_phan_đau_cua_thu.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo\balo_da_pu_tron_thoi_trang_thiet_ke_basic_phoi.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/phu_kien/balo_tui/chuyen_đen_phan_đau_cua_thu.jpg</RelativePath>
+      <RelativePath>images/phu_kien/balo/balo_da_pu_tron_thoi_trang_thiet_ke_basic_phoi.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -1262,14 +1198,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo_tui\chuyen_đen_phan_đau_cua_thu.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo\balo_da_pu_tron_thoi_trang_thiet_ke_basic_phoi.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo_tui\tui_tote_linen_rut_day_thoi_trang.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo\chuyen_đen_phan_đau_cua_thu.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ClothingStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/phu_kien/balo_tui/tui_tote_linen_rut_day_thoi_trang.jpg</RelativePath>
+      <RelativePath>images/phu_kien/balo/chuyen_đen_phan_đau_cua_thu.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -1278,55 +1214,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo_tui\tui_tote_linen_rut_day_thoi_trang.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo_tui\tui_tote_organic_cotton_theu_chu.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>ClothingStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/phu_kien/balo_tui/tui_tote_organic_cotton_theu_chu.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo_tui\tui_tote_organic_cotton_theu_chu.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo_tui\tui_đeo_cheo_phoi_mau_chong_tham_thiet_ke.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>ClothingStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/phu_kien/balo_tui/tui_đeo_cheo_phoi_mau_chong_tham_thiet_ke.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo_tui\tui_đeo_cheo_phoi_mau_chong_tham_thiet_ke.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo_tui\tui_đeo_cheo_unisex_da_pu_phoi_day_basic.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>ClothingStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/ClothingStore</BasePath>
-      <RelativePath>images/phu_kien/balo_tui/tui_đeo_cheo_unisex_da_pu_phoi_day_basic.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo_tui\tui_đeo_cheo_unisex_da_pu_phoi_day_basic.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\balo\chuyen_đen_phan_đau_cua_thu.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\giay\giay_bata_da_tron_basic.jpg))">
       <SourceType>Package</SourceType>
@@ -1583,6 +1471,86 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\non\non_luoi_trai_nu_cotton_that_no_ke_soc.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\tui\tui_tote_linen_rut_day_thoi_trang.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ClothingStore</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ClothingStore</BasePath>
+      <RelativePath>images/phu_kien/tui/tui_tote_linen_rut_day_thoi_trang.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\tui\tui_tote_linen_rut_day_thoi_trang.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\tui\tui_tote_organic_cotton_theu_chu.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ClothingStore</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ClothingStore</BasePath>
+      <RelativePath>images/phu_kien/tui/tui_tote_organic_cotton_theu_chu.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\tui\tui_tote_organic_cotton_theu_chu.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\tui\tui_đeo_cheo_phoi_mau_chong_tham_thiet_ke.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ClothingStore</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ClothingStore</BasePath>
+      <RelativePath>images/phu_kien/tui/tui_đeo_cheo_phoi_mau_chong_tham_thiet_ke.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\tui\tui_đeo_cheo_phoi_mau_chong_tham_thiet_ke.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\tui\tui_đeo_cheo_unisex_da_pu_phoi_day_basic.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ClothingStore</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ClothingStore</BasePath>
+      <RelativePath>images/phu_kien/tui/tui_đeo_cheo_unisex_da_pu_phoi_day_basic.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\tui\tui_đeo_cheo_unisex_da_pu_phoi_day_basic.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\vi\bop_da_mini_đeo_cheo_tron_freesize.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ClothingStore</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ClothingStore</BasePath>
+      <RelativePath>images/phu_kien/vi/bop_da_mini_đeo_cheo_tron_freesize.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\phu_kien\vi\bop_da_mini_đeo_cheo_tron_freesize.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\tst1.jpg))">
       <SourceType>Package</SourceType>

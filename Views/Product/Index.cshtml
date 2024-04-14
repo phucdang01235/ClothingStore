@@ -147,11 +147,11 @@
                                 <a asp-controller="Product" asp-action="LikeProduct" asp-route-productId="@item.ProductId">
                                     @if (_productService.IsLikeProduct(item.ProductId, user.Id))
                                     {
-                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-hand-thumbs-up-fill"></i>
                                     }
                                     else
                                     {
-                                        <i class="bi bi-star icon"></i>
+                                        <i class="bi bi-hand-thumbs-up"></i>
                                     }
 
                                 </a>

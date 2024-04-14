@@ -1,4 +1,11 @@
 ﻿@using ClothingStore.Models.Entity
+@using ClothingStore.Models.Response
+@using ClothingStore.Models.Helper
+@using ClothingStore.Models.Service.product
+@using ClothingStore.Models.Service.category
+
+@inject IProductService ProductService
+@inject ICategoryService CategoryService
 
 @{
     var productStatistics = TempData["ProductStatistics"];
@@ -9,7 +16,14 @@
     var totalRevenue = TempData["TotalRevenue"];
     Product topProductRevenue = (Product)TempData["TopProductRevenue"];
 
-    List<Product> topProduct = (List<Product>)TempData["TopProduct"];
+    // Top sản phẩm bán chạy nhất
+    List<ProductResponse> topProduct = Context.Session.GetObjectFromJson<List<ProductResponse>>("TopProduct");
+    
+    // Top sản phẩm được yêu thích
+    List<LikeResponse> topLike = Context.Session.GetObjectFromJson<List<LikeResponse>>("TopLike");
+    
+    // Loại sản phẩm bán chạy nhất
+    List<CategoryResponse> topCategory = Context.Session.GetObjectFromJson<List<CategoryResponse>>("TopCategory");
 
 }
 
@@ -73,22 +87,91 @@
     <div class="row justify-content-between">
         <div class="col-3 bg-white statistics">
             <p class="text-center">Loại sản phẩm bán chạy nhất</p>
+            <div>
+                @for (int i = 0; i < (topCategory.Count > 2 ? 3 : topCategory.Count); i++)
+                {
+                    <div class="row border mb-3">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Top</th>
+                                    <th>Tên loại</th>
+                                    <th>Số lượng bán</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td><strong>@(i + 1)</strong></td>
+                                    <td style="width: 100px;">@CategoryService.GetByIdAsync(topCategory.ElementAt(i).CategoryId).Result.Name</td>
+                                    <td>@topCategory.ElementAt(i).Total</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                }
+            </div>
         </div>
         <div class="col-4 bg-white statistics">
             <p class="text-center">Top sản phẩm bán chạy nhất</p>
             <div>
-                @for(int i = 0; i < 3; i++ )
+                @for (int i = 0; i < (topProduct.Count > 2 ? 3 : topProduct.Count); i++)
                 {
-                    <div class="row">
-                        <div class="col-3">
-                            <img src="@topProduct.ElementAt(i).ProductImages?[0].ImageUrl" />
-                        </div>
+                    <div class="row border mb-3">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Top</th>
+                                    <th>Ảnh SP</th>
+                                    <th>Tên</th>
+                                    <th>Số lượng bán</th>
+                                </tr>
+                            </thead>
+                        
+                            <tbody>
+                                <tr>
+                                    <td><strong>@(i + 1)</strong></td>
+                                    <td><img style="width: 100px;" src="@ProductService.GetByIdAsync(topProduct.ElementAt(i).ProductId).Result.ProductImages?[0].ImageUrl" /></td>
+                                    <td style="width: 100px;">@ProductService.GetByIdAsync(topProduct.ElementAt(i).ProductId).Result.Name</td>
+                                    <td>@topProduct.ElementAt(i).Total</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
                     </div>
                 }
             </div>
         </div>
         <div class="col-4 bg-white statistics">
             <p class="text-center">Top sản phẩm được yêu thích nhất</p>
+            <div>
+                @for (int i = 0; i < (topLike.Count > 2 ? 3 : topLike.Count); i++)
+                {
+                    <div class="row border mb-3">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Top</th>
+                                    <th>Ảnh SP</th>
+                                    <th>Tên</th>
+                                    <th>Lượt yêu thích</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td><strong>@(i + 1)</strong></td>
+                                    <td><img style="width: 100px;" src="@ProductService.GetByIdAsync(topLike.ElementAt(i).ProductId).Result.ProductImages?[0].ImageUrl" /></td>
+                                    <td style="width: 100px;">@ProductService.GetByIdAsync(topLike.ElementAt(i).ProductId).Result.Name</td>
+                                    <td>@topLike.ElementAt(i).Total</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                }
+            </div>
         </div>
     </div>
 </div>
@@ -103,5 +186,9 @@
         text-transform: uppercase;
         font-size: 16px;
         font-weight: 600;
+    }
+
+    td, th {
+        text-align: center;
     }
 </style>

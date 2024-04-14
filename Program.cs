@@ -9,6 +9,7 @@ using ClothingStore.Models.Service.vnpay;
 using ClothingStore.Models.Service.size;
 using ClothingStore.Models.Service.productsize;
 using ClothingStore.Models.Service.category;
+using ClothingStore.Models.Service.like;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,7 +39,7 @@ builder.Services.AddScoped<IOrderDetailService, OrderDetailService>();
 builder.Services.AddScoped<ISizeService, SizeService>();
 builder.Services.AddScoped<IProductSizeService, ProductSizeService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
-
+builder.Services.AddScoped<ILikeService, LikeService>();
 
 
 builder.Services.AddDistributedMemoryCache();

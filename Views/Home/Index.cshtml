@@ -8,8 +8,8 @@
     
 @{
     ViewData["Title"] = "Home Page";
-    var manProducts = Model.Where(i => i.Gender.Equals("Nam") && i.Category.Name.Equals("Áo Nam")).ToList();
-    var womenProducts = Model.Where(i => i.Gender.Equals("Nữ") && i.Category.Name.Equals("Quần Nữ")).ToList();
+    var manProducts = Model.Where(i => i.Gender.Equals("Nam") && i.Category.Name.Equals("Áo Polo")).ToList();
+    var womenProducts = Model.Where(i => i.Gender.Equals("Nữ") && i.Category.Name.Equals("Quần Jean")).ToList();
     var user = await _userManager.GetUserAsync(User);
 }
 
@@ -27,18 +27,18 @@
                     <div class="card p-0 shadow" style="width: 18rem;">
                         <img src="@manProducts[i].ProductImages[0].ImageUrl" class="card-img-top">
                         <div class="card-body px-4 align-items-">
-                            <h6 class="card-title" style="min-height: 40px;">@manProducts[i].Name</h6>
+                            <a class="card-title" style="min-height: 40px;" asp-controller="Product" asp-action="Detail" asp-route-productId="@manProducts[i].ProductId">@manProducts[i].Name</a>
                             <p class="card-text">@manProducts[i].UnitPrice VNĐ</p>
                             <div class="action d-flex justify-content-between">
                                 <div>
                                     <a asp-controller="Product" asp-action="LikeProduct" asp-route-productId="@manProducts[i].ProductId">
                                         @if (_productService.IsLikeProduct(manProducts[i].ProductId, user.Id))
                                         {
-                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-hand-thumbs-up-fill"></i>
                                         }
                                         else
                                         {
-                                            <i class="bi bi-star icon"></i>
+                                            <i class="bi bi-hand-thumbs-up"></i>
                                         }
 
                                     </a>
@@ -72,18 +72,18 @@
                     <div class="card p-0 shadow" style="width: 18rem;">
                         <img src="@womenProducts[i].ProductImages[0].ImageUrl" class="card-img-top">
                         <div class="card-body px-4 align-items-">
-                            <a class="card-title" style="min-height: 40px;" asp-controller="Product" asp-action="RedirectToProductsView">@womenProducts[i].Name</a>
+                            <a class="card-title" style="min-height: 40px;" asp-controller="Product" asp-action="Detail" asp-route-productId="@womenProducts[i].ProductId">@womenProducts[i].Name</a>
                             <p class="card-text">@womenProducts[i].UnitPrice VNĐ</p>
                             <div class="action d-flex justify-content-between">
                                 <div>
                                     <a asp-controller="Product" asp-action="LikeProduct" asp-route-productId="@womenProducts[i].ProductId">
                                         @if (_productService.IsLikeProduct(womenProducts[i].ProductId, user.Id))
                                         {
-                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-hand-thumbs-up-fill"></i>
                                         }
                                         else
                                         {
-                                            <i class="bi bi-star icon"></i>
+                                            <i class="bi bi-hand-thumbs-up"></i>
                                         }
                                     </a>
                                 </div>

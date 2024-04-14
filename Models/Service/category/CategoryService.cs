@@ -17,7 +17,7 @@ namespace ClothingStore.Models.Service.category
 
         public async Task<Category> GetByIdAsync(int id)
         {
-            return await _context.Categories.FindAsync(id);
+            return await _context.Categories.FirstOrDefaultAsync(i => i.CategoryId == id);
         }
     }
 }

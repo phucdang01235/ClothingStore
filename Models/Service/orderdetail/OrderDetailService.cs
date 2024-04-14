@@ -23,7 +23,7 @@ namespace ClothingStore.Models.Service.orderdetail
 
         public async Task<IEnumerable<OrderDetail>> GetAllAsync()
         {
-            return await _context.OrderDetails.Include( i => i.Order).ToListAsync();
+            return await _context.OrderDetails.Include( i => i.Order).Include(i => i.Product).ToListAsync();
         }
 
         public async Task<IEnumerable<OrderDetail>> GetOrderDetailsAsync(string userId, int orderId)

@@ -26,7 +26,21 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="wwwroot\images\banner\" />
     <Folder Include="wwwroot\images\nam\ao_thun\" />
+    <Folder Include="wwwroot\images\nam\ao_so_mi\" />
+    <Folder Include="wwwroot\images\nam\ao_khoac\" />
+    <Folder Include="wwwroot\images\nam\ao_vest_blazer\" />
+    <Folder Include="wwwroot\images\nam\ao_tanktop\" />
+    <Folder Include="wwwroot\images\nam\ao_len\" />
+    <Folder Include="wwwroot\images\nam\ao_hoodie_sweater\" />
+    <Folder Include="wwwroot\images\nam\quan_short\" />
+    <Folder Include="wwwroot\images\nam\quan_vai\" />
+    <Folder Include="wwwroot\images\nam\quan_kaki\" />
+    <Folder Include="wwwroot\images\nu\dam\" />
+    <Folder Include="wwwroot\images\nu\chan_vay\" />
+    <Folder Include="wwwroot\images\nu\ao_khoac\" />
+    <Folder Include="wwwroot\images\nu\quan_kaki\" />
     <Folder Include="wwwroot\images\nu\quan_jogger\" />
+    <Folder Include="wwwroot\images\phu_kien\that_lung\" />
   </ItemGroup>
 
 </Project>

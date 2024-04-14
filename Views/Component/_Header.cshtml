@@ -139,8 +139,8 @@
                         <a class="dropdown-toggle dropdown-toggle-account nav-link text-dark icon" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person"></i>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <a class="btn btn-light" asp-controller="Order" asp-action="Index">Lịch sử mua hàng</a>
+                        <ul class="dropdown-menu dropdown-menu-end text-center">
+                            <a class="btn btn-light w-100"  style="line-height: 50px;" asp-controller="Order" asp-action="Index">Lịch sử mua hàng</a>
                             <partial name="../Shared/_LoginPartial" />
                         </ul>
                     </li>
@@ -248,8 +248,8 @@
                                     </a>
                                 </div>
                                 <div class="wishlist-body ">
-                                    <input class="wishlist-price border-0 mb-4" value="@(shoppingCart.Items[i].UnitPrice).000" name="orderDetailDTO[@i].UnitPrice" readonly /> VNĐ
-                                    <input class="myNumber" type="number" name="orderDetailDTO[@i].NumberOfProduct" value="@shoppingCart.Items[i].Quantity" />
+                                    <input class="wishlist-price border-0 mb-4" value="@(shoppingCart.Items[i].UnitPrice)" name="orderDetailDTO[@i].UnitPrice" readonly /> VNĐ
+                                    <input class="myNumber" type="number" name="orderDetailDTO[@i].NumberOfProduct" value="@shoppingCart.Items[i].Quantity" id="quantity" />
                                 </div>
 
                             </div>
@@ -260,7 +260,7 @@
             <div class="offcanvas-bottom border border-top">
                 <div class="sub-total">
                     <p>Tổng tiền: </p>
-                    <p>@(shoppingCart.TotalPrice).000 VNĐ</p>
+                    <p id="totalPrice">@(shoppingCart.TotalPrice) VNĐ</p>
                 </div>
                 <div class="sub-action">
                     <button class="add-shopping-cart p-2 d-block text-center col-5">
@@ -417,3 +417,4 @@
         border-radius: 18px;
     }
 </style>
+

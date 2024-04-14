@@ -183,10 +183,13 @@ namespace ClothingStore.Areas.Admin.Controllers
                     prefixUrl += "ao_vest_blazer/";
                     break;
                 case "Áo Tank Top":
-                    prefixUrl += "ao_tank_top/";
+                    prefixUrl += "ao_tanktop/";
                     break;
                 case "Áo Len":
                     prefixUrl += "ao_len/";
+                    break;
+                case "Áo Hoodie - Sweater":
+                    prefixUrl += "ao_hoodie_sweater/";
                     break;
                 case "Quần Jean":
                     prefixUrl += "quan_jean/";
